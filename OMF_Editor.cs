@@ -80,18 +80,24 @@ namespace OMF_Editor
             openFileDialog1.Filter = "OMF file|*.omf";
             saveFileDialog1.Filter = saveFileDialog2.Filter = "OMF file|*.omf|Skls file|*.skls|Skl file|*.skl";
 
-            this.Text = "OMF editor [modified version]";
+            this.Text = "OMF editor [Verdatim's modified version]";
 
             cloneToolStripMenuItem.Enabled = false;
 
-            Boxes.Add(chbxStopAtEnd);
+            // from verdatim
+            Boxes.Add(chbxESMFX);
+
+			Boxes.Add(chbxStopAtEnd);
             Boxes.Add(chbxNoMix);
             Boxes.Add(chbxSyncPart);
             Boxes.Add(chbxUseFootSteps);
             Boxes.Add(chbxMoveXForm);
             Boxes.Add(chbxIdle);
             Boxes.Add(chbxUseWeaponBone);
-            Boxes.Add(chbxHasMotionMarks);
+			// from verdatim
+			Boxes.Add(chbxSkipFirstFrame);
+
+			Boxes.Add(chbxHasMotionMarks);
 
             textBoxes.Add(tbxMotName);
             textBoxes.Add(tbxMotSpeed);
@@ -357,9 +363,9 @@ namespace OMF_Editor
 
             int Flags = GetCurrentMotion().Flags;
 
-            for (int i = 1; i < 8; i++)
+            for (int i = 1; i < 10; i++)
             {
-                Boxes[i - 1].Checked = (Flags & (1 << i)) == (1 << i);
+                Boxes[i - 1].Checked = (Flags & (1 << i-1)) == (1 << i-1);
             }
 
             chbxHasMotionMarks.Checked = (Main_OMF.GetMotionVersion() == 4 && GetCurrentMotion().m_marks != null);
@@ -369,9 +375,9 @@ namespace OMF_Editor
         {
             if (Main_OMF == null || !bTextBoxEnabled) return;
 
-            for (int i = 1; i < 8; i++)
+            for (int i = 1; i < 10; i++)
             {
-                GetCurrentMotion().Flags = BitSet(GetCurrentMotion().Flags, (1 << i), Boxes[i - 1].Checked);
+                GetCurrentMotion().Flags = BitSet(GetCurrentMotion().Flags, (1 << i-1), Boxes[i - 1].Checked);
             }
         }
 
@@ -1004,7 +1010,30 @@ namespace OMF_Editor
             System.Diagnostics.Process.Start("https://github.com/VaIeroK/Omf-Editor");
         }
 
-        private void swapAnimsToolStripMenuItem_Click(object sender, EventArgs e)
+		private void linkLabel2_LinkClicked(object sender, EventArgs e)
+		{
+			System.Diagnostics.Process.Start("https://github.com/Verdatim25/Omf-Editor");
+		}
+
+		private void linkLabel3_LinkClicked(object sender, EventArgs e)
+		{
+            MessageBox.Show("Original OMF editor by Mortany. \nModified version created by Valerok. \nFurther modified by Verdatim to add hidden flag \"esmFX\", and Anomaly Modded Exes [version_name_here] \"SkipFirstFrame\" flag for additive HUD animations.", "Acknowledgements");
+		}
+
+		private void linkLabel4_LinkClicked(object sender, EventArgs e)
+		{
+			MessageBox.Show("This explanation is in the perspective of Stalker Anomaly modding. Information may or may not be correct for other Stalker games/mods.\nESMFX:\n    ESMFX is a special flag used for " +
+            "very few animations in Anomaly. Notable mentions include mutant and stalker hit animations such as the ones in mutant_boar_animation.omf. They are extra animations that have " +
+            "their own chain of functions. it is meant to be played on top of the current animation. Though due to the nature of their implementation, it does very little.\nSkip First Frame:\n    " +
+            "Skip First Frame is an Anomaly modded exes exclusive flag added for " +
+            "additive HUD animations (also created by me). This flag simply copies the second keyframes translations and rotations onto the first keyframe. Only works for additive animations.\nStop At End:\n    Stop At End describes whether the motion will stop playing once it reaches the last keyframe, without this flag, the animation will reset " +
+			"once it reaches the last keyframe and start playing from the first keyframe again.\nNo Mix:\n    No Mix has no current use in the stalker anomaly modded exes engine.\nSync Part:\n    " +
+			"Sync Part is used for stalker NPC animations. It syncs the NPC's torso and legs blends' (animations) \"time\" together, essentially keeping the two animations in sync.\nUse Foot Steps:\n" +
+			"    Use Foot Steps has no current use in the anomaly modded exes engine.\nMove XForm:\n    Move XForm is for stalker NPC animations. Upon the animation being called it: 1. Stops the " +
+			"NPC's movement entirely and 2. Plays the animation.\nIdle:\n    Idle has no current use in the anomaly modded exes engine.\nUse Weapon Bone:\n    Use Weapon Bone has no current use in the anomaly modded exes engine.", "Flag Explanations");
+		}
+
+		private void swapAnimsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
             DialogResult res = openFileDialog1.ShowDialog();

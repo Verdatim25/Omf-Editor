@@ -48,7 +48,11 @@ namespace OMF_Editor
             this.chbxSyncPart = new System.Windows.Forms.CheckBox();
             this.chbxNoMix = new System.Windows.Forms.CheckBox();
             this.chbxStopAtEnd = new System.Windows.Forms.CheckBox();
-            this.label6 = new System.Windows.Forms.Label();
+            // from verdatim
+			this.chbxESMFX = new System.Windows.Forms.CheckBox();
+			this.chbxSkipFirstFrame = new System.Windows.Forms.CheckBox();
+
+			this.label6 = new System.Windows.Forms.Label();
             this.tbxMotFall = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tbxMotAcc = new System.Windows.Forms.TextBox();
@@ -90,7 +94,12 @@ namespace OMF_Editor
             this.swapAnimsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openSourceCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			// From verdatim
+            this.openSourceCodeModified = new System.Windows.Forms.ToolStripMenuItem();
+			this.openAcknowledgements = new System.Windows.Forms.ToolStripMenuItem();
+			this.openFlagExplanation = new System.Windows.Forms.ToolStripMenuItem();
+
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LabelStatusFileText = new System.Windows.Forms.ToolStripStatusLabel();
             this.LabelStatusFile = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupProgramParams = new System.Windows.Forms.GroupBox();
@@ -140,7 +149,11 @@ namespace OMF_Editor
             this.groupMotionParams.Controls.Add(this.chbxSyncPart);
             this.groupMotionParams.Controls.Add(this.chbxNoMix);
             this.groupMotionParams.Controls.Add(this.chbxStopAtEnd);
-            this.groupMotionParams.Controls.Add(this.label6);
+            // from verdatim
+			this.groupMotionParams.Controls.Add(this.chbxESMFX);
+			this.groupMotionParams.Controls.Add(this.chbxSkipFirstFrame); 
+
+			this.groupMotionParams.Controls.Add(this.label6);
             this.groupMotionParams.Controls.Add(this.tbxMotFall);
             this.groupMotionParams.Controls.Add(this.label5);
             this.groupMotionParams.Controls.Add(this.tbxMotAcc);
@@ -260,10 +273,26 @@ namespace OMF_Editor
             this.chbxStopAtEnd.Tag = "Stop At End";
             this.chbxStopAtEnd.UseVisualStyleBackColor = true;
             this.chbxStopAtEnd.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
+			// 
+			// chbxESMFX
+			// 
+			resources.ApplyResources(this.chbxESMFX, "chbxESMFX");
+			this.chbxESMFX.Name = "chbxESMFX";
+			this.chbxESMFX.Tag = "ESMFX";
+			this.chbxESMFX.UseVisualStyleBackColor = true;
+			this.chbxESMFX.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+			// 
+			// chbxSkipFirstFrame
+			// 
+			resources.ApplyResources(this.chbxSkipFirstFrame, "chbxSkipFirstFrame");
+			this.chbxSkipFirstFrame.Name = "chbxSkipFirstFrame";
+			this.chbxSkipFirstFrame.Tag = "SkipFirstFrame";
+			this.chbxSkipFirstFrame.UseVisualStyleBackColor = true;
+			this.chbxSkipFirstFrame.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+			// 
+			// label6
+			// 
+			resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
             // 
             // tbxMotFall
@@ -555,7 +584,7 @@ namespace OMF_Editor
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.openSourceCodeToolStripMenuItem});
+            this.openSourceCodeToolStripMenuItem, this.openSourceCodeModified, this.openAcknowledgements, this.openFlagExplanation});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             resources.ApplyResources(this.helpToolStripMenuItem, "helpToolStripMenuItem");
             // 
@@ -564,10 +593,30 @@ namespace OMF_Editor
             this.openSourceCodeToolStripMenuItem.Name = "openSourceCodeToolStripMenuItem";
             resources.ApplyResources(this.openSourceCodeToolStripMenuItem, "openSourceCodeToolStripMenuItem");
             this.openSourceCodeToolStripMenuItem.Click += new System.EventHandler(this.linkLabel1_LinkClicked);
+			
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			// openSourceCodeModified
+			// 
+			this.openSourceCodeModified.Name = "openSourceCodeModified";
+			resources.ApplyResources(this.openSourceCodeModified, "openSourceCodeModified");
+			this.openSourceCodeModified.Click += new System.EventHandler(this.linkLabel2_LinkClicked);
+			// 
+			// openAcknowledgements
+			// 
+			this.openAcknowledgements.Name = "openAcknowledgements";
+			resources.ApplyResources(this.openAcknowledgements, "openAcknowledgements");
+			this.openAcknowledgements.Click += new System.EventHandler(this.linkLabel3_LinkClicked);
+			// 
+			// openFlagExplanation
+			// 
+			this.openFlagExplanation.Name = "openFlagExplanation";
+			resources.ApplyResources(this.openFlagExplanation, "openFlagExplanation");
+			this.openFlagExplanation.Click += new System.EventHandler(this.linkLabel4_LinkClicked);
+
+			// 
+			// statusStrip1
+			// 
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.LabelStatusFileText,
             this.LabelStatusFile});
             resources.ApplyResources(this.statusStrip1, "statusStrip1");
@@ -683,7 +732,11 @@ namespace OMF_Editor
         private System.Windows.Forms.CheckBox chbxSyncPart;
         private System.Windows.Forms.CheckBox chbxNoMix;
         private System.Windows.Forms.CheckBox chbxStopAtEnd;
-		private System.Windows.Forms.CheckBox chbxHasMotionMarks;
+		// from verdatim
+        private System.Windows.Forms.CheckBox chbxESMFX;
+		private System.Windows.Forms.CheckBox chbxSkipFirstFrame; 
+		
+        private System.Windows.Forms.CheckBox chbxHasMotionMarks;
 		private System.Windows.Forms.GroupBox groupMotionMarks;
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox boxEndMotionMark;
@@ -720,6 +773,11 @@ namespace OMF_Editor
         private System.Windows.Forms.ToolStripStatusLabel LabelStatusFile;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openSourceCodeToolStripMenuItem;
+		// from verdatim
+        private System.Windows.Forms.ToolStripMenuItem openSourceCodeModified; 
+		private System.Windows.Forms.ToolStripMenuItem openAcknowledgements; 
+		private System.Windows.Forms.ToolStripMenuItem openFlagExplanation; 
+		
         private System.Windows.Forms.ToolStripMenuItem swapAnimsToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupProgramParams;
         private System.Windows.Forms.CheckBox chbxRealTimeLength;

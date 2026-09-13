@@ -305,6 +305,34 @@
   <data name="&gt;&gt;chbxStopAtEnd.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+
+  <!--from verdatim-->
+	<data name="&gt;&gt;chbxESMFX.Name" xml:space="preserve">
+    <value>chbxESMFX</value>
+  </data>
+	<data name="&gt;&gt;chbxESMFX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;chbxESMFX.Parent" xml:space="preserve">
+    <value>groupMotionParams</value>
+  </data>
+	<data name="&gt;&gt;chbxESMFX.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+
+	<data name="&gt;&gt;chbxSkipFirstFrame.Name" xml:space="preserve">
+    <value>chbxSkipFirstFrame</value>
+  </data>
+	<data name="&gt;&gt;chbxSkipFirstFrame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;chbxSkipFirstFrame.Parent" xml:space="preserve">
+    <value>groupMotionParams</value>
+  </data>
+	<data name="&gt;&gt;chbxSkipFirstFrame.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+
   <data name="&gt;&gt;label6.Name" xml:space="preserve">
     <value>label6</value>
   </data>
@@ -879,6 +907,100 @@
   <data name="&gt;&gt;chbxStopAtEnd.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+
+  <!--From Verdatim-->
+	<data name="chbxESMFX.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="chbxESMFX.Location" type="System.Drawing.Point, System.Drawing">
+		<value>0, 0</value>
+	</data>
+	<data name="chbxESMFX.Size" type="System.Drawing.Size, System.Drawing">
+		<value>92, 17</value>
+	</data>
+	<data name="chbxESMFX.TabIndex" type="System.Int32, mscorlib">
+		<value>15</value>
+	</data>
+	<data name="chbxESMFX.Text" xml:space="preserve">
+    <value>ESMFX</value>
+  </data>
+	<data name="chbxESMFX.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleCenter</value>
+	</data>
+	<data name="&gt;&gt;chbxESMFX.Name" xml:space="preserve">
+    <value>chbxESMFX</value>
+  </data>
+	<data name="&gt;&gt;chbxESMFX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;chbxESMFX.Parent" xml:space="preserve">
+    <value>groupMotionParams</value>
+  </data>
+	<data name="&gt;&gt;chbxESMFX.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="chbxESMFX.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="chbxESMFX.Location" type="System.Drawing.Point, System.Drawing">
+		<value>0, 0</value>
+	</data>
+	<data name="chbxESMFX.Size" type="System.Drawing.Size, System.Drawing">
+		<value>92, 17</value>
+	</data>
+	<data name="chbxESMFX.TabIndex" type="System.Int32, mscorlib">
+		<value>15</value>
+	</data>
+	<data name="chbxESMFX.Text" xml:space="preserve">
+    <value>ESMFX</value>
+  </data>
+	<data name="chbxESMFX.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleCenter</value>
+	</data>
+	<data name="&gt;&gt;chbxESMFX.Name" xml:space="preserve">
+    <value>chbxESMFX</value>
+  </data>
+	<data name="&gt;&gt;chbxESMFX.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;chbxESMFX.Parent" xml:space="preserve">
+    <value>groupMotionParams</value>
+  </data>
+	<data name="&gt;&gt;chbxESMFX.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+
+	<data name="chbxSkipFirstFrame.AutoSize" type="System.Boolean, mscorlib">
+		<value>True</value>
+	</data>
+	<data name="chbxSkipFirstFrame.Location" type="System.Drawing.Point, System.Drawing">
+		<value>56, 0</value>
+	</data>
+	<data name="chbxSkipFirstFrame.Size" type="System.Drawing.Size, System.Drawing">
+		<value>92, 17</value>
+	</data>
+	<data name="chbxSkipFirstFrame.TabIndex" type="System.Int32, mscorlib">
+		<value>15</value>
+	</data>
+	<data name="chbxSkipFirstFrame.Text" xml:space="preserve">
+    <value>Skip First Frame</value>
+  </data>
+	<data name="chbxSkipFirstFrame.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+		<value>MiddleCenter</value>
+	</data>
+	<data name="&gt;&gt;chbxSkipFirstFrame.Name" xml:space="preserve">
+    <value>chbxSkipFirstFrame</value>
+  </data>
+	<data name="&gt;&gt;chbxSkipFirstFrame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+	<data name="&gt;&gt;chbxSkipFirstFrame.Parent" xml:space="preserve">
+    <value>groupMotionParams</value>
+  </data>
+	<data name="&gt;&gt;chbxSkipFirstFrame.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1683,6 +1805,26 @@
   <data name="openSourceCodeToolStripMenuItem.Text" xml:space="preserve">
     <value>Open Source Code</value>
   </data>
+	<!--from verdatim-->
+  <data name="openSourceCodeModified.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="openSourceCodeModified.Text" xml:space="preserve">
+    <value>Open Modified Source Code (Verdatim)</value>
+  </data>
+  <data name="openAcknowledgements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="openAcknowledgements.Text" xml:space="preserve">
+    <value>Open Acknowledgements</value>
+  </data>
+  <data name="openFlagExplanation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 22</value>
+  </data>
+  <data name="openFlagExplanation.Text" xml:space="preserve">
+    <value>Open Flag Explanations</value>
+  </data>
+
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>683, 17</value>
   </metadata>
@@ -1986,6 +2128,27 @@
   <data name="&gt;&gt;openSourceCodeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+
+  <!--From Verdatim-->
+  <data name="&gt;&gt;openSourceCodeModified.Name" xml:space="preserve">
+    <value>openSourceCodeModified</value>
+  </data>
+  <data name="&gt;&gt;openSourceCodeModified.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openAcknowledgements.Name" xml:space="preserve">
+    <value>openAcknowledgements</value>
+  </data>
+  <data name="&gt;&gt;openAcknowledgements.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openFlagExplanation.Name" xml:space="preserve">
+    <value>openFlagExplanation</value>
+  </data>
+  <data name="&gt;&gt;openFlagExplanation.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+
   <data name="&gt;&gt;LabelStatusFileText.Name" xml:space="preserve">
     <value>LabelStatusFileText</value>
   </data>

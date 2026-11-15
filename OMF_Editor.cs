@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -53,9 +54,55 @@ namespace OMF_Editor
             // Very dirty hack
             if (Environment.GetCommandLineArgs().Length > 1) OpenFile(Environment.GetCommandLineArgs()[1]);
 
-        }
+            // drag drop capability
+			this.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
+			this.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
 
-        [DllImport("converter.dll")]
+			this.lbxMotions.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
+			this.lbxMotions.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
+
+		}
+
+		private void OMF_Editor_DragDrop(object sender, DragEventArgs e)
+		{
+            // thanks windows
+
+			// Handle FileDrop data.
+			if (e.Data.GetDataPresent(DataFormats.FileDrop))
+			{
+				// Assign the file names to a string array, in 
+				// case the user has selected multiple files.
+				string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                string main_file = files[0];
+                if (!(main_file.EndsWith(".omf"))){
+                    string message = String.Format("File \n\"{0}\"\n is not an OMF file.", main_file);
+					MessageBox.Show(message, "Error");
+                    return;
+				}
+				try
+				{
+                    OpenFile(files[0]);
+				}
+				catch (Exception ex)
+				{
+					MessageBox.Show(ex.Message);
+					return;
+				}
+			}
+		}
+
+		private void OMF_Editor_DragEnter(object sender, DragEventArgs e)
+		{
+			// thanks windows
+
+			if (e.Data.GetDataPresent(DataFormats.FileDrop))
+				e.Effect = DragDropEffects.Copy;
+			else
+				e.Effect = DragDropEffects.None;
+		}
+
+		[DllImport("converter.dll")]
         private static extern int CSharpStartAgent(string path, string out_path, int mode, int convert_to_mode, string motion_list);
 
         private int RunConverter(string path, string out_path, int mode, int convert_to_mode, string motion_list)

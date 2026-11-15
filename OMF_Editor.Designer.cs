@@ -116,6 +116,7 @@ namespace OMF_Editor
 			// 
 			// lbxMotions
 			// 
+			this.lbxMotions.AllowDrop = true;
 			resources.ApplyResources(this.lbxMotions, "lbxMotions");
 			this.lbxMotions.FormattingEnabled = true;
 			this.lbxMotions.Name = "lbxMotions";
@@ -678,6 +679,7 @@ namespace OMF_Editor
 			// 
 			// OMF_Editor
 			// 
+			this.AllowDrop = true;
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.Controls.Add(this.groupProgramParams);

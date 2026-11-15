@@ -83,6 +83,12 @@
     </Compile>
     <Compile Include="Common.cs" />
     <Compile Include="Editor.cs" />
+    <Compile Include="KeyframeWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyframeWindow.Designer.cs">
+      <DependentUpon>KeyframeWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="OMF_Editor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="RenameBones.Designer.cs" />
     <EmbeddedResource Include="BonePartsWindow.resx">
       <DependentUpon>BonePartsWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyframeWindow.resx">
+      <DependentUpon>KeyframeWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OMF_Editor.resx">
       <DependentUpon>OMF_Editor.cs</DependentUpon>

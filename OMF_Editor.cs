@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Windows.Forms;
-using System.IO;
-using System.Text.RegularExpressions;
 using System.Globalization;
+using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
 
 namespace OMF_Editor
 {
@@ -35,7 +35,7 @@ namespace OMF_Editor
         bool bMotMarkPanel = false;
 
         List<CheckBox> Boxes = new List<CheckBox>();
-        List<TextBox> textBoxes = new List<TextBox>();
+        List<TextBox> textBoxes = new List<System.Windows.Forms.TextBox>();
 
         ResourceManager rm = new ResourceManager(typeof(OMF_Editor));
 
@@ -1161,8 +1161,10 @@ namespace OMF_Editor
 					}
 				}
             }
+            // call the keyframe window
+			KeyframeWindow window = new KeyframeWindow(Main_OMF.bone_cont.parts, rotation_result, translation_result, GetCurrentMotion());
+			window.ShowDialog();
 
-            
 		}
         int flTKeyPresent = (1 << 0);
         int flRKeyAbsent = (1 << 1);

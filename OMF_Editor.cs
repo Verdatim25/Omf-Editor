@@ -884,7 +884,10 @@ namespace OMF_Editor
             }
             else
             {
-                DialogResult result = MessageBox.Show("This operation will delete all existing motion marks. Are you sure?", "Warning!", MessageBoxButtons.YesNo);
+                // change by verdatim, only show confirmation box if motion mark count is not 0
+                DialogResult result = DialogResult.Yes;
+                if (GetCurrentMotion().MarksCount != 0)
+				result = MessageBox.Show("This operation will delete all existing motion marks. Are you sure?", "Warning!", MessageBoxButtons.YesNo);
 
                 if (result == DialogResult.Yes)
                 {

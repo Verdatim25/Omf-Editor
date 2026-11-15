@@ -1080,5 +1080,92 @@ namespace OMF_Editor
                 window.ShowDialog();
             }
         }
-    }
+
+		private void ViewKeyFrames_Click(object sender, EventArgs e)
+		{
+            // code from verdatim 15/11/26 dd/mm/yy
+            AnimVector selected = GetCurrentAnimVector();
+            if (selected == null) return;
+            byte[] data = selected.data;
+
+            // the binary data going forward is presented as such: a u32 4 byte string for the number of keyframes, and then a u8 flag for the animation data,
+            // followed by the animation data for each bone (which consists of a rotation and translation key set)
+            // for every bone id, there are rotation and translation key sets for each frame
+            // the order is as such: bone_id -> frame -> rotation + translation
+            // each bone_id is not represented in the binary data, though it dictates how many sets of frames tied to rotation and translation keys there are
+            // the frame is similar
+            // the rotation set is 4 quarternions of s16 size, i.e. 2 bytes, total 8 bytes
+            // each translation set is 3 x,y,z coordinates of either s8, i.e. 1 byte, or s16, i.e. 2 bytes, size dicated from the flag above, total 3 or 6 bytes
+            // flag definitions are below (straight from the engine at SkeletonMotions.h at line 20)
+
+            // get the bone count
+            short Bone_count = Main_OMF.bone_cont.Count;
+
+            int TotalKeyFrames = BitConverter.ToInt32(data, 0);
+            // fifth byte in the data, indices start at 0
+            int flags = data[4];
+
+            int stream_index = 4;
+
+            short[][][] rotation_result = null;
+			short[][][] translation_result = null;
+
+			// iterate across bones
+			for (int i = 0; i < Bone_count; i++) {
+                for (int k = 0; k < TotalKeyFrames; k++){
+                    // test for rotation key presence flag
+                    if ((flags & flRKeyAbsent) != 0) {
+                            // move stream index by 8
+                            stream_index += 8;
+                    }
+                    else {
+                        // crc_q value
+                        stream_index += 4;
+                        // length of the rotation values is the total keyframes * 8
+                        int length = 8;
+                            short x = BitConverter.ToInt16(data, stream_index + (k * 8)); ;
+							short y = BitConverter.ToInt16(data, stream_index + 1 + (k * 8)); 
+						    short z = BitConverter.ToInt16(data, stream_index + 2 + (k * 8));
+						    short w = BitConverter.ToInt16(data, stream_index + 3 + (k * 8));
+						    rotation_result[i][k][0] = x;
+							rotation_result[i][k][1] = y;
+							rotation_result[i][k][2] = z;
+							rotation_result[i][k][3] = w;
+                        stream_index += length;
+                    }
+					if ((flags & flTKeyPresent) != 0)
+					{
+						// crc_t value
+						stream_index += 4;
+                        if ((flags & flTKey16IsBit) != 0){
+                            int length = 6;
+							short x = BitConverter.ToInt16(data, stream_index + (k * 6));
+							short y = BitConverter.ToInt16(data, stream_index + 1 + (k * 6));
+							short z = BitConverter.ToInt16(data, stream_index + 2 + (k * 6));
+							translation_result[i][k][0] = x;
+							translation_result[i][k][1] = y;
+							translation_result[i][k][2] = z;
+							stream_index += length;
+						}
+                        else{
+                            int length = 3;
+							short x = data[stream_index + (k * 3)];
+							short y = data[stream_index + 1 + (k * 3)];
+							short z = data[stream_index + 2 + (k * 3)];
+							translation_result[i][k][0] = x;
+							translation_result[i][k][1] = y;
+							translation_result[i][k][2] = z;
+							stream_index += length;
+						}
+
+					}
+				}
+            }
+
+            
+		}
+        int flTKeyPresent = (1 << 0);
+        int flRKeyAbsent = (1 << 1);
+        int flTKey16IsBit = (1 << 2);
+	}
 }

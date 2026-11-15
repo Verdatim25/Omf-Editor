@@ -100,6 +100,9 @@ namespace OMF_Editor
                 box.Checked = false;
             }
 
+            // disable View Keyframes button
+            ViewKeyFrames.Enabled = false;
+
             groupMotionTimeFormat.Enabled = false;
 
             ChangeMotionMarksPanelState(false);
@@ -121,7 +124,10 @@ namespace OMF_Editor
                 box.Enabled = true;
             }
 
-            groupMotionTimeFormat.Enabled = true;
+			// enalbe View Keyframes button
+			ViewKeyFrames.Enabled = true;
+
+			groupMotionTimeFormat.Enabled = true;
         }
     }
 }

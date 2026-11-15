@@ -141,7 +141,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lbxMotions.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
@@ -171,361 +171,39 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>22</value>
   </data>
-  <data name="&gt;&gt;groupMotionTimeFormat.Name" xml:space="preserve">
-    <value>groupMotionTimeFormat</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ViewKeyFrames.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;groupMotionTimeFormat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupMotionTimeFormat.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;groupMotionTimeFormat.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tbxMotLength.Name" xml:space="preserve">
-    <value>tbxMotLength</value>
-  </data>
-  <data name="&gt;&gt;tbxMotLength.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxMotLength.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;tbxMotLength.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;chbxHasMotionMarks.Name" xml:space="preserve">
-    <value>chbxHasMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;chbxHasMotionMarks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxHasMotionMarks.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;chbxHasMotionMarks.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
-  </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;chbxUseWeaponBone.Name" xml:space="preserve">
-    <value>chbxUseWeaponBone</value>
-  </data>
-  <data name="&gt;&gt;chbxUseWeaponBone.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxUseWeaponBone.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;chbxUseWeaponBone.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;chbxIdle.Name" xml:space="preserve">
-    <value>chbxIdle</value>
-  </data>
-  <data name="&gt;&gt;chbxIdle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxIdle.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;chbxIdle.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;chbxMoveXForm.Name" xml:space="preserve">
-    <value>chbxMoveXForm</value>
-  </data>
-  <data name="&gt;&gt;chbxMoveXForm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxMoveXForm.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;chbxMoveXForm.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;chbxUseFootSteps.Name" xml:space="preserve">
-    <value>chbxUseFootSteps</value>
-  </data>
-  <data name="&gt;&gt;chbxUseFootSteps.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxUseFootSteps.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;chbxUseFootSteps.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;chbxSyncPart.Name" xml:space="preserve">
-    <value>chbxSyncPart</value>
-  </data>
-  <data name="&gt;&gt;chbxSyncPart.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxSyncPart.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;chbxSyncPart.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;chbxNoMix.Name" xml:space="preserve">
-    <value>chbxNoMix</value>
-  </data>
-  <data name="&gt;&gt;chbxNoMix.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxNoMix.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;chbxNoMix.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;chbxStopAtEnd.Name" xml:space="preserve">
-    <value>chbxStopAtEnd</value>
-  </data>
-  <data name="&gt;&gt;chbxStopAtEnd.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxStopAtEnd.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;chbxStopAtEnd.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-
-  <!--from verdatim-->
-	<data name="&gt;&gt;chbxESMFX.Name" xml:space="preserve">
-    <value>chbxESMFX</value>
-  </data>
-	<data name="&gt;&gt;chbxESMFX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;chbxESMFX.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-	<data name="&gt;&gt;chbxESMFX.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-
-	<data name="&gt;&gt;chbxSkipFirstFrame.Name" xml:space="preserve">
-    <value>chbxSkipFirstFrame</value>
-  </data>
-	<data name="&gt;&gt;chbxSkipFirstFrame.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;chbxSkipFirstFrame.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-	<data name="&gt;&gt;chbxSkipFirstFrame.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;tbxMotFall.Name" xml:space="preserve">
-    <value>tbxMotFall</value>
-  </data>
-  <data name="&gt;&gt;tbxMotFall.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxMotFall.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;tbxMotFall.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;tbxMotAcc.Name" xml:space="preserve">
-    <value>tbxMotAcc</value>
-  </data>
-  <data name="&gt;&gt;tbxMotAcc.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxMotAcc.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;tbxMotAcc.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;tbxMotPower.Name" xml:space="preserve">
-    <value>tbxMotPower</value>
-  </data>
-  <data name="&gt;&gt;tbxMotPower.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxMotPower.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;tbxMotPower.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;tbxMotSpeed.Name" xml:space="preserve">
-    <value>tbxMotSpeed</value>
-  </data>
-  <data name="&gt;&gt;tbxMotSpeed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxMotSpeed.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;tbxMotSpeed.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;tbxMotName.Name" xml:space="preserve">
-    <value>tbxMotName</value>
-  </data>
-  <data name="&gt;&gt;tbxMotName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxMotName.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;tbxMotName.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="groupMotionParams.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 8.25pt</value>
-  </data>
-  <data name="groupMotionParams.Location" type="System.Drawing.Point, System.Drawing">
-    <value>274, 32</value>
-  </data>
-  <data name="groupMotionParams.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 328</value>
-  </data>
-  <data name="groupMotionParams.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;groupMotionParams.Name" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-  <data name="&gt;&gt;groupMotionParams.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupMotionParams.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupMotionParams.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;radioButtonKeys.Name" xml:space="preserve">
-    <value>radioButtonKeys</value>
-  </data>
-  <data name="&gt;&gt;radioButtonKeys.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonKeys.Parent" xml:space="preserve">
-    <value>groupMotionTimeFormat</value>
-  </data>
-  <data name="&gt;&gt;radioButtonKeys.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;LabelMotionTimeFormat.Name" xml:space="preserve">
-    <value>LabelMotionTimeFormat</value>
-  </data>
-  <data name="&gt;&gt;LabelMotionTimeFormat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;LabelMotionTimeFormat.Parent" xml:space="preserve">
-    <value>groupMotionTimeFormat</value>
-  </data>
-  <data name="&gt;&gt;LabelMotionTimeFormat.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;radioButtonSeconds.Name" xml:space="preserve">
-    <value>radioButtonSeconds</value>
-  </data>
-  <data name="&gt;&gt;radioButtonSeconds.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioButtonSeconds.Parent" xml:space="preserve">
-    <value>groupMotionTimeFormat</value>
-  </data>
-  <data name="&gt;&gt;radioButtonSeconds.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupMotionTimeFormat.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="ViewKeyFrames.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 255</value>
   </data>
-  <data name="groupMotionTimeFormat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>239, 62</value>
+  <data name="ViewKeyFrames.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 38</value>
   </data>
-  <data name="groupMotionTimeFormat.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
+  <data name="ViewKeyFrames.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
   </data>
-  <data name="&gt;&gt;groupMotionTimeFormat.Name" xml:space="preserve">
-    <value>groupMotionTimeFormat</value>
+  <data name="ViewKeyFrames.Text" xml:space="preserve">
+    <value>View Keyframes</value>
   </data>
-  <data name="&gt;&gt;groupMotionTimeFormat.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;ViewKeyFrames.Name" xml:space="preserve">
+    <value>ViewKeyFrames</value>
   </data>
-  <data name="&gt;&gt;groupMotionTimeFormat.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ViewKeyFrames.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ViewKeyFrames.Parent" xml:space="preserve">
     <value>groupMotionParams</value>
   </data>
-  <data name="&gt;&gt;groupMotionTimeFormat.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;ViewKeyFrames.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="radioButtonKeys.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="radioButtonKeys.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
@@ -610,6 +288,27 @@
   <data name="&gt;&gt;radioButtonSeconds.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="groupMotionTimeFormat.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 299</value>
+  </data>
+  <data name="groupMotionTimeFormat.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 62</value>
+  </data>
+  <data name="groupMotionTimeFormat.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;groupMotionTimeFormat.Name" xml:space="preserve">
+    <value>groupMotionTimeFormat</value>
+  </data>
+  <data name="&gt;&gt;groupMotionTimeFormat.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupMotionTimeFormat.Parent" xml:space="preserve">
+    <value>groupMotionParams</value>
+  </data>
+  <data name="&gt;&gt;groupMotionTimeFormat.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="tbxMotLength.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
@@ -632,7 +331,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;tbxMotLength.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="chbxHasMotionMarks.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -641,7 +340,7 @@
     <value>NoControl</value>
   </data>
   <data name="chbxHasMotionMarks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 234</value>
+    <value>91, 253</value>
   </data>
   <data name="chbxHasMotionMarks.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 17</value>
@@ -665,7 +364,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;chbxHasMotionMarks.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -695,13 +394,13 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="chbxUseWeaponBone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chbxUseWeaponBone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 211</value>
+    <value>91, 230</value>
   </data>
   <data name="chbxUseWeaponBone.Size" type="System.Drawing.Size, System.Drawing">
     <value>116, 17</value>
@@ -725,13 +424,13 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;chbxUseWeaponBone.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="chbxIdle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chbxIdle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 188</value>
+    <value>91, 207</value>
   </data>
   <data name="chbxIdle.Size" type="System.Drawing.Size, System.Drawing">
     <value>50, 17</value>
@@ -755,13 +454,13 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;chbxIdle.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="chbxMoveXForm.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chbxMoveXForm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 166</value>
+    <value>91, 185</value>
   </data>
   <data name="chbxMoveXForm.Size" type="System.Drawing.Size, System.Drawing">
     <value>86, 17</value>
@@ -785,13 +484,13 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;chbxMoveXForm.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="chbxUseFootSteps.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chbxUseFootSteps.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 143</value>
+    <value>91, 162</value>
   </data>
   <data name="chbxUseFootSteps.Size" type="System.Drawing.Size, System.Drawing">
     <value>110, 17</value>
@@ -815,13 +514,13 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;chbxUseFootSteps.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="chbxSyncPart.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chbxSyncPart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 120</value>
+    <value>91, 139</value>
   </data>
   <data name="chbxSyncPart.Size" type="System.Drawing.Size, System.Drawing">
     <value>80, 17</value>
@@ -845,13 +544,13 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;chbxSyncPart.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="chbxNoMix.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chbxNoMix.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 97</value>
+    <value>91, 116</value>
   </data>
   <data name="chbxNoMix.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 17</value>
@@ -875,13 +574,13 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;chbxNoMix.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="chbxStopAtEnd.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="chbxStopAtEnd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>98, 74</value>
+    <value>91, 93</value>
   </data>
   <data name="chbxStopAtEnd.Size" type="System.Drawing.Size, System.Drawing">
     <value>92, 17</value>
@@ -905,102 +604,68 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;chbxStopAtEnd.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-
-  <!--From Verdatim-->
-	<data name="chbxESMFX.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="chbxESMFX.Location" type="System.Drawing.Point, System.Drawing">
-		<value>0, 0</value>
-	</data>
-	<data name="chbxESMFX.Size" type="System.Drawing.Size, System.Drawing">
-		<value>92, 17</value>
-	</data>
-	<data name="chbxESMFX.TabIndex" type="System.Int32, mscorlib">
-		<value>15</value>
-	</data>
-	<data name="chbxESMFX.Text" xml:space="preserve">
-    <value>ESMFX</value>
-  </data>
-	<data name="chbxESMFX.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-		<value>MiddleCenter</value>
-	</data>
-	<data name="&gt;&gt;chbxESMFX.Name" xml:space="preserve">
-    <value>chbxESMFX</value>
-  </data>
-	<data name="&gt;&gt;chbxESMFX.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-	<data name="&gt;&gt;chbxESMFX.Parent" xml:space="preserve">
-    <value>groupMotionParams</value>
-  </data>
-	<data name="&gt;&gt;chbxESMFX.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <data name="chbxESMFX.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="chbxESMFX.Location" type="System.Drawing.Point, System.Drawing">
-		<value>0, 0</value>
-	</data>
-	<data name="chbxESMFX.Size" type="System.Drawing.Size, System.Drawing">
-		<value>92, 17</value>
-	</data>
-	<data name="chbxESMFX.TabIndex" type="System.Int32, mscorlib">
-		<value>15</value>
-	</data>
-	<data name="chbxESMFX.Text" xml:space="preserve">
+    <value>True</value>
+  </data>
+  <data name="chbxESMFX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 70</value>
+  </data>
+  <data name="chbxESMFX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 17</value>
+  </data>
+  <data name="chbxESMFX.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="chbxESMFX.Text" xml:space="preserve">
     <value>ESMFX</value>
   </data>
-	<data name="chbxESMFX.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-		<value>MiddleCenter</value>
-	</data>
-	<data name="&gt;&gt;chbxESMFX.Name" xml:space="preserve">
+  <data name="chbxESMFX.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;chbxESMFX.Name" xml:space="preserve">
     <value>chbxESMFX</value>
   </data>
-	<data name="&gt;&gt;chbxESMFX.Type" xml:space="preserve">
+  <data name="&gt;&gt;chbxESMFX.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-	<data name="&gt;&gt;chbxESMFX.Parent" xml:space="preserve">
+  <data name="&gt;&gt;chbxESMFX.Parent" xml:space="preserve">
     <value>groupMotionParams</value>
   </data>
-	<data name="&gt;&gt;chbxESMFX.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;chbxESMFX.ZOrder" xml:space="preserve">
+    <value>12</value>
   </data>
-
-	<data name="chbxSkipFirstFrame.AutoSize" type="System.Boolean, mscorlib">
-		<value>True</value>
-	</data>
-	<data name="chbxSkipFirstFrame.Location" type="System.Drawing.Point, System.Drawing">
-		<value>56, 0</value>
-	</data>
-	<data name="chbxSkipFirstFrame.Size" type="System.Drawing.Size, System.Drawing">
-		<value>92, 17</value>
-	</data>
-	<data name="chbxSkipFirstFrame.TabIndex" type="System.Int32, mscorlib">
-		<value>15</value>
-	</data>
-	<data name="chbxSkipFirstFrame.Text" xml:space="preserve">
+  <data name="chbxSkipFirstFrame.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chbxSkipFirstFrame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>91, 276</value>
+  </data>
+  <data name="chbxSkipFirstFrame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 17</value>
+  </data>
+  <data name="chbxSkipFirstFrame.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="chbxSkipFirstFrame.Text" xml:space="preserve">
     <value>Skip First Frame</value>
   </data>
-	<data name="chbxSkipFirstFrame.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-		<value>MiddleCenter</value>
-	</data>
-	<data name="&gt;&gt;chbxSkipFirstFrame.Name" xml:space="preserve">
+  <data name="chbxSkipFirstFrame.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;chbxSkipFirstFrame.Name" xml:space="preserve">
     <value>chbxSkipFirstFrame</value>
   </data>
-	<data name="&gt;&gt;chbxSkipFirstFrame.Type" xml:space="preserve">
+  <data name="&gt;&gt;chbxSkipFirstFrame.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-	<data name="&gt;&gt;chbxSkipFirstFrame.Parent" xml:space="preserve">
+  <data name="&gt;&gt;chbxSkipFirstFrame.Parent" xml:space="preserve">
     <value>groupMotionParams</value>
   </data>
-	<data name="&gt;&gt;chbxSkipFirstFrame.ZOrder" xml:space="preserve">
-    <value>10</value>
+  <data name="&gt;&gt;chbxSkipFirstFrame.ZOrder" xml:space="preserve">
+    <value>13</value>
   </data>
-
   <data name="label6.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1026,7 +691,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>14</value>
   </data>
   <data name="tbxMotFall.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -1050,7 +715,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;tbxMotFall.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>15</value>
   </data>
   <data name="label5.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1077,7 +742,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>16</value>
   </data>
   <data name="tbxMotAcc.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -1101,7 +766,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;tbxMotAcc.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>17</value>
   </data>
   <data name="label4.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1128,7 +793,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>18</value>
   </data>
   <data name="tbxMotPower.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -1152,7 +817,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;tbxMotPower.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>19</value>
   </data>
   <data name="label3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1179,7 +844,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>20</value>
   </data>
   <data name="tbxMotSpeed.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -1203,7 +868,7 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;tbxMotSpeed.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>21</value>
   </data>
   <data name="tbxMotName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
@@ -1227,7 +892,31 @@
     <value>groupMotionParams</value>
   </data>
   <data name="&gt;&gt;tbxMotName.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>23</value>
+  </data>
+  <data name="groupMotionParams.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 8.25pt</value>
+  </data>
+  <data name="groupMotionParams.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 32</value>
+  </data>
+  <data name="groupMotionParams.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 364</value>
+  </data>
+  <data name="groupMotionParams.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;groupMotionParams.Name" xml:space="preserve">
+    <value>groupMotionParams</value>
+  </data>
+  <data name="&gt;&gt;groupMotionParams.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupMotionParams.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupMotionParams.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>157, 17</value>
@@ -1235,15 +924,6 @@
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>293, 17</value>
   </metadata>
-  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 70</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
-    <value>contextMenuStrip1</value>
-  </data>
-  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="cloneToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>161, 22</value>
   </data>
@@ -1262,152 +942,14 @@
   <data name="saveAsSelectedToolStripMenuItem.Text" xml:space="preserve">
     <value>Save As Selected</value>
   </data>
-  <data name="&gt;&gt;btnDelMark.Name" xml:space="preserve">
-    <value>btnDelMark</value>
+  <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 70</value>
   </data>
-  <data name="&gt;&gt;btnDelMark.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;contextMenuStrip1.Name" xml:space="preserve">
+    <value>contextMenuStrip1</value>
   </data>
-  <data name="&gt;&gt;btnDelMark.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;btnDelMark.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnAddMark.Name" xml:space="preserve">
-    <value>btnAddMark</value>
-  </data>
-  <data name="&gt;&gt;btnAddMark.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddMark.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;btnAddMark.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnDelMarkGroup.Name" xml:space="preserve">
-    <value>btnDelMarkGroup</value>
-  </data>
-  <data name="&gt;&gt;btnDelMarkGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDelMarkGroup.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;btnDelMarkGroup.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnAddMarkGroup.Name" xml:space="preserve">
-    <value>btnAddMarkGroup</value>
-  </data>
-  <data name="&gt;&gt;btnAddMarkGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddMarkGroup.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;btnAddMarkGroup.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;listMotionMarksParams.Name" xml:space="preserve">
-    <value>listMotionMarksParams</value>
-  </data>
-  <data name="&gt;&gt;listMotionMarksParams.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listMotionMarksParams.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;listMotionMarksParams.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;listMotionMarksGroup.Name" xml:space="preserve">
-    <value>listMotionMarksGroup</value>
-  </data>
-  <data name="&gt;&gt;listMotionMarksGroup.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;listMotionMarksGroup.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;listMotionMarksGroup.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;boxEndMotionMark.Name" xml:space="preserve">
-    <value>boxEndMotionMark</value>
-  </data>
-  <data name="&gt;&gt;boxEndMotionMark.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;boxEndMotionMark.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;boxEndMotionMark.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
-  <data name="&gt;&gt;label8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;boxStartMotionMark.Name" xml:space="preserve">
-    <value>boxStartMotionMark</value>
-  </data>
-  <data name="&gt;&gt;boxStartMotionMark.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;boxStartMotionMark.Parent" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;boxStartMotionMark.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="groupMotionMarks.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 8.25pt</value>
-  </data>
-  <data name="groupMotionMarks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>275, 366</value>
-  </data>
-  <data name="groupMotionMarks.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 154</value>
-  </data>
-  <data name="groupMotionMarks.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="groupMotionMarks.Text" xml:space="preserve">
-    <value>Motion Marks:</value>
-  </data>
-  <data name="&gt;&gt;groupMotionMarks.Name" xml:space="preserve">
-    <value>groupMotionMarks</value>
-  </data>
-  <data name="&gt;&gt;groupMotionMarks.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupMotionMarks.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupMotionMarks.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="&gt;&gt;contextMenuStrip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="btnDelMark.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
@@ -1517,6 +1059,12 @@
   <data name="listMotionMarksParams.Alignment" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
     <value>Left</value>
   </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
   <data name="listMotionMarksParams.LabelWrap" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -1541,14 +1089,14 @@
   <data name="&gt;&gt;listMotionMarksParams.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="columnHeader2.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
   <data name="listMotionMarksGroup.Alignment" type="System.Windows.Forms.ListViewAlignment, System.Windows.Forms">
     <value>Left</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>65</value>
   </data>
   <data name="listMotionMarksGroup.LabelWrap" type="System.Boolean, mscorlib">
     <value>False</value>
@@ -1573,12 +1121,6 @@
   </data>
   <data name="&gt;&gt;listMotionMarksGroup.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="columnHeader1.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
-    <value>65</value>
   </data>
   <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1688,12 +1230,66 @@
   <data name="&gt;&gt;boxStartMotionMark.ZOrder" xml:space="preserve">
     <value>9</value>
   </data>
+  <data name="groupMotionMarks.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 8.25pt</value>
+  </data>
+  <data name="groupMotionMarks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>274, 402</value>
+  </data>
+  <data name="groupMotionMarks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 154</value>
+  </data>
+  <data name="groupMotionMarks.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="groupMotionMarks.Text" xml:space="preserve">
+    <value>Motion Marks:</value>
+  </data>
+  <data name="&gt;&gt;groupMotionMarks.Name" xml:space="preserve">
+    <value>groupMotionMarks</value>
+  </data>
+  <data name="&gt;&gt;groupMotionMarks.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupMotionMarks.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupMotionMarks.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <metadata name="Anim_timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>448, 17</value>
   </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>568, 17</value>
   </metadata>
+  <data name="loasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="loasToolStripMenuItem.Text" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="saveToolStripMenuItem.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Save as...</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 6</value>
+  </data>
+  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 22</value>
+  </data>
+  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
+    <value>Exit</value>
+  </data>
   <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>37, 20</value>
   </data>
@@ -1701,46 +1297,70 @@
     <value>File</value>
   </data>
   <data name="mergeWithToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>167, 22</value>
   </data>
   <data name="mergeWithToolStripMenuItem.Text" xml:space="preserve">
     <value>Merge with...</value>
   </data>
   <data name="addAnimsFromToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>167, 22</value>
   </data>
   <data name="addAnimsFromToolStripMenuItem.Text" xml:space="preserve">
     <value>Add anims from</value>
   </data>
   <data name="tryRepairToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>167, 22</value>
   </data>
   <data name="tryRepairToolStripMenuItem.Text" xml:space="preserve">
     <value>Try Repair</value>
   </data>
   <data name="swapAnimsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>167, 22</value>
   </data>
   <data name="swapAnimsToolStripMenuItem.Text" xml:space="preserve">
     <value>Swap anim marks</value>
   </data>
   <data name="renameBonesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>167, 22</value>
   </data>
   <data name="renameBonesToolStripMenuItem.Text" xml:space="preserve">
     <value>Rename bones</value>
   </data>
   <data name="showBonePartsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>180, 22</value>
+    <value>167, 22</value>
   </data>
   <data name="showBonePartsToolStripMenuItem.Text" xml:space="preserve">
     <value>Show bone parts</value>
   </data>
   <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>46, 20</value>
+    <value>47, 20</value>
   </data>
   <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
     <value>Tools</value>
+  </data>
+  <data name="openSourceCodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="openSourceCodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open Source Code</value>
+  </data>
+  <data name="openSourceCodeModified.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="openSourceCodeModified.Text" xml:space="preserve">
+    <value>Open Modified Source Code (Verdatim)</value>
+  </data>
+  <data name="openAcknowledgements.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="openAcknowledgements.Text" xml:space="preserve">
+    <value>Open Acknowledgements</value>
+  </data>
+  <data name="openFlagExplanation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 22</value>
+  </data>
+  <data name="openFlagExplanation.Text" xml:space="preserve">
+    <value>Open Flag Explanations</value>
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>44, 20</value>
@@ -1770,64 +1390,23 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
-  <data name="loasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="loasToolStripMenuItem.Text" xml:space="preserve">
-    <value>Load</value>
-  </data>
-  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="saveToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="saveAsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="saveAsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Save as...</value>
-  </data>
-  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 6</value>
-  </data>
-  <data name="exitToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 22</value>
-  </data>
-  <data name="exitToolStripMenuItem.Text" xml:space="preserve">
-    <value>Exit</value>
-  </data>
-  <data name="openSourceCodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="openSourceCodeToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open Source Code</value>
-  </data>
-	<!--from verdatim-->
-  <data name="openSourceCodeModified.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="openSourceCodeModified.Text" xml:space="preserve">
-    <value>Open Modified Source Code (Verdatim)</value>
-  </data>
-  <data name="openAcknowledgements.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="openAcknowledgements.Text" xml:space="preserve">
-    <value>Open Acknowledgements</value>
-  </data>
-  <data name="openFlagExplanation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 22</value>
-  </data>
-  <data name="openFlagExplanation.Text" xml:space="preserve">
-    <value>Open Flag Explanations</value>
-  </data>
-
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>683, 17</value>
   </metadata>
+  <data name="LabelStatusFileText.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 17</value>
+  </data>
+  <data name="LabelStatusFileText.Text" xml:space="preserve">
+    <value>File:</value>
+  </data>
+  <data name="LabelStatusFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 17</value>
+  </data>
+  <data name="LabelStatusFile.Text" xml:space="preserve">
+    <value>-</value>
+  </data>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 633</value>
   </data>
@@ -1850,69 +1429,6 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;statusStrip1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="LabelStatusFileText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 17</value>
-  </data>
-  <data name="LabelStatusFileText.Text" xml:space="preserve">
-    <value>File:</value>
-  </data>
-  <data name="LabelStatusFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>12, 17</value>
-  </data>
-  <data name="LabelStatusFile.Text" xml:space="preserve">
-    <value>-</value>
-  </data>
-  <data name="&gt;&gt;chbxAskForOverwrite.Name" xml:space="preserve">
-    <value>chbxAskForOverwrite</value>
-  </data>
-  <data name="&gt;&gt;chbxAskForOverwrite.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxAskForOverwrite.Parent" xml:space="preserve">
-    <value>groupProgramParams</value>
-  </data>
-  <data name="&gt;&gt;chbxAskForOverwrite.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;chbxRealTimeLength.Name" xml:space="preserve">
-    <value>chbxRealTimeLength</value>
-  </data>
-  <data name="&gt;&gt;chbxRealTimeLength.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chbxRealTimeLength.Parent" xml:space="preserve">
-    <value>groupProgramParams</value>
-  </data>
-  <data name="&gt;&gt;chbxRealTimeLength.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupProgramParams.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Consolas, 8.25pt</value>
-  </data>
-  <data name="groupProgramParams.Location" type="System.Drawing.Point, System.Drawing">
-    <value>275, 526</value>
-  </data>
-  <data name="groupProgramParams.Size" type="System.Drawing.Size, System.Drawing">
-    <value>256, 101</value>
-  </data>
-  <data name="groupProgramParams.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="groupProgramParams.Text" xml:space="preserve">
-    <value>Program params:</value>
-  </data>
-  <data name="&gt;&gt;groupProgramParams.Name" xml:space="preserve">
-    <value>groupProgramParams</value>
-  </data>
-  <data name="&gt;&gt;groupProgramParams.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupProgramParams.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;groupProgramParams.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="chbxAskForOverwrite.AutoSize" type="System.Boolean, mscorlib">
@@ -1980,6 +1496,33 @@
   </data>
   <data name="&gt;&gt;chbxRealTimeLength.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="groupProgramParams.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Consolas, 8.25pt</value>
+  </data>
+  <data name="groupProgramParams.Location" type="System.Drawing.Point, System.Drawing">
+    <value>275, 562</value>
+  </data>
+  <data name="groupProgramParams.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 65</value>
+  </data>
+  <data name="groupProgramParams.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="groupProgramParams.Text" xml:space="preserve">
+    <value>Program params:</value>
+  </data>
+  <data name="&gt;&gt;groupProgramParams.Name" xml:space="preserve">
+    <value>groupProgramParams</value>
+  </data>
+  <data name="&gt;&gt;groupProgramParams.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupProgramParams.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupProgramParams.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="saveFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>786, 19</value>
@@ -2116,6 +1659,18 @@
   <data name="&gt;&gt;swapAnimsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;renameBonesToolStripMenuItem.Name" xml:space="preserve">
+    <value>renameBonesToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;renameBonesToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showBonePartsToolStripMenuItem.Name" xml:space="preserve">
+    <value>showBonePartsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;showBonePartsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
     <value>helpToolStripMenuItem</value>
   </data>
@@ -2128,8 +1683,6 @@
   <data name="&gt;&gt;openSourceCodeToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-
-  <!--From Verdatim-->
   <data name="&gt;&gt;openSourceCodeModified.Name" xml:space="preserve">
     <value>openSourceCodeModified</value>
   </data>
@@ -2148,7 +1701,6 @@
   <data name="&gt;&gt;openFlagExplanation.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-
   <data name="&gt;&gt;LabelStatusFileText.Name" xml:space="preserve">
     <value>LabelStatusFileText</value>
   </data>
@@ -2166,18 +1718,6 @@
   </data>
   <data name="&gt;&gt;saveFileDialog2.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;renameBonesToolStripMenuItem.Name" xml:space="preserve">
-    <value>renameBonesToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;renameBonesToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;showBonePartsToolStripMenuItem.Name" xml:space="preserve">
-    <value>showBonePartsToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;showBonePartsToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>OMF_Editor</value>

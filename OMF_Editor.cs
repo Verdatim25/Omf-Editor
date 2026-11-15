@@ -8,8 +8,10 @@ using System.Linq;
 using System.Reflection;
 using System.Resources;
 using System.Runtime.InteropServices;
+using System.Runtime.InteropServices.ComTypes;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Microsoft.VisualBasic.Devices;
 
 namespace OMF_Editor
 {
@@ -76,7 +78,7 @@ namespace OMF_Editor
 
                 string main_file = files[0];
                 if (!(main_file.EndsWith(".omf"))){
-                    string message = String.Format("File \n\"{0}\"\n is not an OMF file.", main_file);
+                    string message = String.Format("File \n\"{0}\"\n is not an OMF file.", Path.GetFileName(main_file));
 					MessageBox.Show(message, "Error");
                     return;
 				}

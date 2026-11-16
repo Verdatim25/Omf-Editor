@@ -93,6 +93,9 @@ namespace OMF_Editor
 			this.swapAnimsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.renameBonesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showBonePartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.showFlagToolTipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.renameMotionMarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openSourceCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openSourceCodeModified = new System.Windows.Forms.ToolStripMenuItem();
@@ -105,6 +108,8 @@ namespace OMF_Editor
 			this.chbxAskForOverwrite = new System.Windows.Forms.CheckBox();
 			this.chbxRealTimeLength = new System.Windows.Forms.CheckBox();
 			this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
+			this.FlagsToolTip = new System.Windows.Forms.ToolTip(this.components);
+			this.deleteEmptyMotionMarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.groupMotionParams.SuspendLayout();
 			this.groupMotionTimeFormat.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
@@ -227,6 +232,7 @@ namespace OMF_Editor
 			resources.ApplyResources(this.chbxUseWeaponBone, "chbxUseWeaponBone");
 			this.chbxUseWeaponBone.Name = "chbxUseWeaponBone";
 			this.chbxUseWeaponBone.Tag = "UseWeaponBone";
+			this.FlagsToolTip.SetToolTip(this.chbxUseWeaponBone, resources.GetString("chbxUseWeaponBone.ToolTip"));
 			this.chbxUseWeaponBone.UseVisualStyleBackColor = true;
 			this.chbxUseWeaponBone.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -235,6 +241,7 @@ namespace OMF_Editor
 			resources.ApplyResources(this.chbxIdle, "chbxIdle");
 			this.chbxIdle.Name = "chbxIdle";
 			this.chbxIdle.Tag = "Idle";
+			this.FlagsToolTip.SetToolTip(this.chbxIdle, resources.GetString("chbxIdle.ToolTip"));
 			this.chbxIdle.UseVisualStyleBackColor = true;
 			this.chbxIdle.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -243,6 +250,7 @@ namespace OMF_Editor
 			resources.ApplyResources(this.chbxMoveXForm, "chbxMoveXForm");
 			this.chbxMoveXForm.Name = "chbxMoveXForm";
 			this.chbxMoveXForm.Tag = "Move XForm";
+			this.FlagsToolTip.SetToolTip(this.chbxMoveXForm, resources.GetString("chbxMoveXForm.ToolTip"));
 			this.chbxMoveXForm.UseVisualStyleBackColor = true;
 			this.chbxMoveXForm.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -251,6 +259,7 @@ namespace OMF_Editor
 			resources.ApplyResources(this.chbxUseFootSteps, "chbxUseFootSteps");
 			this.chbxUseFootSteps.Name = "chbxUseFootSteps";
 			this.chbxUseFootSteps.Tag = "UseFootSteps";
+			this.FlagsToolTip.SetToolTip(this.chbxUseFootSteps, resources.GetString("chbxUseFootSteps.ToolTip"));
 			this.chbxUseFootSteps.UseVisualStyleBackColor = true;
 			this.chbxUseFootSteps.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -259,6 +268,7 @@ namespace OMF_Editor
 			resources.ApplyResources(this.chbxSyncPart, "chbxSyncPart");
 			this.chbxSyncPart.Name = "chbxSyncPart";
 			this.chbxSyncPart.Tag = "Sync Part";
+			this.FlagsToolTip.SetToolTip(this.chbxSyncPart, resources.GetString("chbxSyncPart.ToolTip"));
 			this.chbxSyncPart.UseVisualStyleBackColor = true;
 			this.chbxSyncPart.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -267,6 +277,7 @@ namespace OMF_Editor
 			resources.ApplyResources(this.chbxNoMix, "chbxNoMix");
 			this.chbxNoMix.Name = "chbxNoMix";
 			this.chbxNoMix.Tag = "No Mix";
+			this.FlagsToolTip.SetToolTip(this.chbxNoMix, resources.GetString("chbxNoMix.ToolTip"));
 			this.chbxNoMix.UseVisualStyleBackColor = true;
 			this.chbxNoMix.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -275,6 +286,7 @@ namespace OMF_Editor
 			resources.ApplyResources(this.chbxStopAtEnd, "chbxStopAtEnd");
 			this.chbxStopAtEnd.Name = "chbxStopAtEnd";
 			this.chbxStopAtEnd.Tag = "Stop At End";
+			this.FlagsToolTip.SetToolTip(this.chbxStopAtEnd, resources.GetString("chbxStopAtEnd.ToolTip"));
 			this.chbxStopAtEnd.UseVisualStyleBackColor = true;
 			this.chbxStopAtEnd.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -283,6 +295,7 @@ namespace OMF_Editor
 			resources.ApplyResources(this.chbxESMFX, "chbxESMFX");
 			this.chbxESMFX.Name = "chbxESMFX";
 			this.chbxESMFX.Tag = "ESMFX";
+			this.FlagsToolTip.SetToolTip(this.chbxESMFX, resources.GetString("chbxESMFX.ToolTip"));
 			this.chbxESMFX.UseVisualStyleBackColor = true;
 			this.chbxESMFX.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -291,6 +304,7 @@ namespace OMF_Editor
 			resources.ApplyResources(this.chbxSkipFirstFrame, "chbxSkipFirstFrame");
 			this.chbxSkipFirstFrame.Name = "chbxSkipFirstFrame";
 			this.chbxSkipFirstFrame.Tag = "SkipFirstFrame";
+			this.FlagsToolTip.SetToolTip(this.chbxSkipFirstFrame, resources.GetString("chbxSkipFirstFrame.ToolTip"));
 			this.chbxSkipFirstFrame.UseVisualStyleBackColor = true;
 			this.chbxSkipFirstFrame.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
 			// 
@@ -505,6 +519,7 @@ namespace OMF_Editor
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.toolsToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.helpToolStripMenuItem});
 			resources.ApplyResources(this.menuStrip1, "menuStrip1");
 			this.menuStrip1.Name = "menuStrip1";
@@ -557,7 +572,10 @@ namespace OMF_Editor
             this.tryRepairToolStripMenuItem,
             this.swapAnimsToolStripMenuItem,
             this.renameBonesToolStripMenuItem,
-            this.showBonePartsToolStripMenuItem});
+            this.showBonePartsToolStripMenuItem,
+            this.showFlagToolTipsToolStripMenuItem,
+            this.renameMotionMarksToolStripMenuItem,
+            this.deleteEmptyMotionMarksToolStripMenuItem});
 			this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
 			resources.ApplyResources(this.toolsToolStripMenuItem, "toolsToolStripMenuItem");
 			// 
@@ -596,6 +614,29 @@ namespace OMF_Editor
 			this.showBonePartsToolStripMenuItem.Name = "showBonePartsToolStripMenuItem";
 			resources.ApplyResources(this.showBonePartsToolStripMenuItem, "showBonePartsToolStripMenuItem");
 			this.showBonePartsToolStripMenuItem.Click += new System.EventHandler(this.showBonePartsToolStripMenuItem_Click);
+			// 
+			// showFlagToolTipsToolStripMenuItem
+			// 
+			this.showFlagToolTipsToolStripMenuItem.Checked = true;
+			this.showFlagToolTipsToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.showFlagToolTipsToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.showFlagToolTipsToolStripMenuItem.Name = "showFlagToolTipsToolStripMenuItem";
+			resources.ApplyResources(this.showFlagToolTipsToolStripMenuItem, "showFlagToolTipsToolStripMenuItem");
+			this.showFlagToolTipsToolStripMenuItem.Click += new System.EventHandler(this.showFlagToolTipsToolStripMenuItem_Click);
+			// 
+			// renameMotionMarksToolStripMenuItem
+			// 
+			this.renameMotionMarksToolStripMenuItem.Name = "renameMotionMarksToolStripMenuItem";
+			resources.ApplyResources(this.renameMotionMarksToolStripMenuItem, "renameMotionMarksToolStripMenuItem");
+			this.renameMotionMarksToolStripMenuItem.Click += new System.EventHandler(this.renameMotionMarksToolStripMenuItem_Click);
+			// 
+			// toolStripMenuItem1
+			// 
+			this.toolStripMenuItem1.Checked = true;
+			this.toolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.toolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -676,6 +717,19 @@ namespace OMF_Editor
 			// saveFileDialog2
 			// 
 			this.saveFileDialog2.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog2_FileOk);
+			// 
+			// FlagsToolTip
+			// 
+			this.FlagsToolTip.AutoPopDelay = 5000;
+			this.FlagsToolTip.InitialDelay = 1000;
+			this.FlagsToolTip.ReshowDelay = 100;
+			this.FlagsToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+			// 
+			// deleteEmptyMotionMarksToolStripMenuItem
+			// 
+			this.deleteEmptyMotionMarksToolStripMenuItem.Name = "deleteEmptyMotionMarksToolStripMenuItem";
+			resources.ApplyResources(this.deleteEmptyMotionMarksToolStripMenuItem, "deleteEmptyMotionMarksToolStripMenuItem");
+			this.deleteEmptyMotionMarksToolStripMenuItem.Click += new System.EventHandler(this.deleteEmptyMotionMarksToolStripMenuItem_Click);
 			// 
 			// OMF_Editor
 			// 
@@ -793,6 +847,11 @@ namespace OMF_Editor
         private System.Windows.Forms.ToolStripMenuItem renameBonesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showBonePartsToolStripMenuItem;
 		private System.Windows.Forms.Button ViewKeyFrames;
+		private System.Windows.Forms.ToolStripMenuItem showFlagToolTipsToolStripMenuItem;
+		private System.Windows.Forms.ToolTip FlagsToolTip;
+		private System.Windows.Forms.ToolStripMenuItem renameMotionMarksToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+		private System.Windows.Forms.ToolStripMenuItem deleteEmptyMotionMarksToolStripMenuItem;
 	}
 }
 

@@ -114,6 +114,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RenameBones.Designer.cs" />
+    <Compile Include="RenameMotionMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenameMotionMarks.Designer.cs">
+      <DependentUpon>RenameMotionMarks.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BonePartsWindow.resx">
       <DependentUpon>BonePartsWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +152,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="RenameBones.resx" />
+    <EmbeddedResource Include="RenameMotionMarks.resx">
+      <DependentUpon>RenameMotionMarks.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

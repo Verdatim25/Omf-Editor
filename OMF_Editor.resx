@@ -144,7 +144,7 @@
     <value>4</value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>147, 17</value>
   </metadata>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -676,7 +676,7 @@
     <value>NoControl</value>
   </data>
   <data name="chbxHasMotionMarks.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 253</value>
+    <value>91, 278</value>
   </data>
   <data name="chbxHasMotionMarks.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 17</value>
@@ -732,6 +732,9 @@
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <metadata name="FlagsToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>21, 17</value>
+  </metadata>
   <data name="chbxUseWeaponBone.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -749,6 +752,9 @@
   </data>
   <data name="chbxUseWeaponBone.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
+  </data>
+  <data name="chbxUseWeaponBone.ToolTip" xml:space="preserve">
+    <value>Use Weapon Bone has no current use in the anomaly modded exes engine.</value>
   </data>
   <data name="&gt;&gt;chbxUseWeaponBone.Name" xml:space="preserve">
     <value>chbxUseWeaponBone</value>
@@ -780,6 +786,9 @@
   <data name="chbxIdle.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
+  <data name="chbxIdle.ToolTip" xml:space="preserve">
+    <value>Idle has no current use in the anomaly modded exes engine.</value>
+  </data>
   <data name="&gt;&gt;chbxIdle.Name" xml:space="preserve">
     <value>chbxIdle</value>
   </data>
@@ -809,6 +818,10 @@
   </data>
   <data name="chbxMoveXForm.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
+  </data>
+  <data name="chbxMoveXForm.ToolTip" xml:space="preserve">
+    <value>Move XForm is for stalker NPC animations. 
+Upon the animation being called it: 1. Stops the NPC's movement entirely and 2. Plays the animation.</value>
   </data>
   <data name="&gt;&gt;chbxMoveXForm.Name" xml:space="preserve">
     <value>chbxMoveXForm</value>
@@ -840,6 +853,9 @@
   <data name="chbxUseFootSteps.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
+  <data name="chbxUseFootSteps.ToolTip" xml:space="preserve">
+    <value>Use Foot Steps has no current use in the anomaly modded exes engine.</value>
+  </data>
   <data name="&gt;&gt;chbxUseFootSteps.Name" xml:space="preserve">
     <value>chbxUseFootSteps</value>
   </data>
@@ -869,6 +885,11 @@
   </data>
   <data name="chbxSyncPart.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
+  </data>
+  <data name="chbxSyncPart.ToolTip" xml:space="preserve">
+    <value>Sync Part is used for stalker NPC animations. 
+It syncs the NPC's torso and legs blends' (animations) "time" together, 
+essentially keeping the two animations in sync.</value>
   </data>
   <data name="&gt;&gt;chbxSyncPart.Name" xml:space="preserve">
     <value>chbxSyncPart</value>
@@ -900,6 +921,9 @@
   <data name="chbxNoMix.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
+  <data name="chbxNoMix.ToolTip" xml:space="preserve">
+    <value>No Mix has no current use in the stalker anomaly modded exes engine.</value>
+  </data>
   <data name="&gt;&gt;chbxNoMix.Name" xml:space="preserve">
     <value>chbxNoMix</value>
   </data>
@@ -929,6 +953,10 @@
   </data>
   <data name="chbxStopAtEnd.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
+  </data>
+  <data name="chbxStopAtEnd.ToolTip" xml:space="preserve">
+    <value>Stop At End describes whether the motion will stop playing once it reaches the last keyframe. 
+Without this flag, the animation will reset once it reaches the last keyframe and start playing from the first keyframe again.</value>
   </data>
   <data name="&gt;&gt;chbxStopAtEnd.Name" xml:space="preserve">
     <value>chbxStopAtEnd</value>
@@ -960,6 +988,12 @@
   <data name="chbxESMFX.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
   </data>
+  <data name="chbxESMFX.ToolTip" xml:space="preserve">
+    <value>ESMFX is a special flag used for very few animations in Anomaly. 
+Notable mentions include mutant and stalker hit animations such as the ones in mutant_boar_animation.omf. 
+They are extra animations that have their own chain of functions. it is meant to be played on top of the current animation. 
+Though due to the nature of their implementation, it does very little.</value>
+  </data>
   <data name="&gt;&gt;chbxESMFX.Name" xml:space="preserve">
     <value>chbxESMFX</value>
   </data>
@@ -976,7 +1010,7 @@
     <value>True</value>
   </data>
   <data name="chbxSkipFirstFrame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>91, 276</value>
+    <value>91, 255</value>
   </data>
   <data name="chbxSkipFirstFrame.Size" type="System.Drawing.Size, System.Drawing">
     <value>122, 17</value>
@@ -989,6 +1023,11 @@
   </data>
   <data name="chbxSkipFirstFrame.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleCenter</value>
+  </data>
+  <data name="chbxSkipFirstFrame.ToolTip" xml:space="preserve">
+    <value>Skip First Frame is an Anomaly modded exes exclusive flag added for additive HUD animations (also created by me). 
+This flag simply copies the second keyframes translations and rotations onto the first keyframe. Only works for additive animations. 
+Has no use currently as additive animations are not implemented.</value>
   </data>
   <data name="&gt;&gt;chbxSkipFirstFrame.Name" xml:space="preserve">
     <value>chbxSkipFirstFrame</value>
@@ -1231,10 +1270,10 @@
     <value>23</value>
   </data>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>157, 17</value>
+    <value>286, 17</value>
   </metadata>
   <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>293, 17</value>
+    <value>421, 17</value>
   </metadata>
   <data name="contextMenuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>162, 70</value>
@@ -1690,11 +1729,86 @@
     <value>9</value>
   </data>
   <metadata name="Anim_timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>448, 17</value>
+    <value>575, 17</value>
   </metadata>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>568, 17</value>
+    <value>697, 17</value>
   </metadata>
+  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="mergeWithToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="mergeWithToolStripMenuItem.Text" xml:space="preserve">
+    <value>Merge with...</value>
+  </data>
+  <data name="addAnimsFromToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="addAnimsFromToolStripMenuItem.Text" xml:space="preserve">
+    <value>Add anims from</value>
+  </data>
+  <data name="tryRepairToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="tryRepairToolStripMenuItem.Text" xml:space="preserve">
+    <value>Try Repair</value>
+  </data>
+  <data name="swapAnimsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="swapAnimsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Swap anim marks</value>
+  </data>
+  <data name="renameBonesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="renameBonesToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rename bones</value>
+  </data>
+  <data name="showBonePartsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="showBonePartsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Show bone parts</value>
+  </data>
+  <data name="showFlagToolTipsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="showFlagToolTipsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Show Flag ToolTips</value>
+  </data>
+  <data name="renameMotionMarksToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 22</value>
+  </data>
+  <data name="renameMotionMarksToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rename Motion Marks</value>
+  </data>
+  <data name="deleteEmptyMotionMarksToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 22</value>
+  </data>
+  <data name="deleteEmptyMotionMarksToolStripMenuItem.Text" xml:space="preserve">
+    <value>Delete Empty Motion marks</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>47, 20</value>
+  </data>
+  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
+    <value>Tools</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 20</value>
+  </data>
+  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 20</value>
+  </data>
+  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
+    <value>Help</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -1718,12 +1832,6 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="fileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>37, 20</value>
-  </data>
-  <data name="fileToolStripMenuItem.Text" xml:space="preserve">
-    <value>File</value>
   </data>
   <data name="loasToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>121, 22</value>
@@ -1752,54 +1860,6 @@
   <data name="exitToolStripMenuItem.Text" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="toolsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>47, 20</value>
-  </data>
-  <data name="toolsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Tools</value>
-  </data>
-  <data name="mergeWithToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="mergeWithToolStripMenuItem.Text" xml:space="preserve">
-    <value>Merge with...</value>
-  </data>
-  <data name="addAnimsFromToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="addAnimsFromToolStripMenuItem.Text" xml:space="preserve">
-    <value>Add anims from</value>
-  </data>
-  <data name="tryRepairToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="tryRepairToolStripMenuItem.Text" xml:space="preserve">
-    <value>Try Repair</value>
-  </data>
-  <data name="swapAnimsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="swapAnimsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Swap anim marks</value>
-  </data>
-  <data name="renameBonesToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="renameBonesToolStripMenuItem.Text" xml:space="preserve">
-    <value>Rename bones</value>
-  </data>
-  <data name="showBonePartsToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>167, 22</value>
-  </data>
-  <data name="showBonePartsToolStripMenuItem.Text" xml:space="preserve">
-    <value>Show bone parts</value>
-  </data>
-  <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 20</value>
-  </data>
-  <data name="helpToolStripMenuItem.Text" xml:space="preserve">
-    <value>Help</value>
-  </data>
   <data name="openSourceCodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>282, 22</value>
   </data>
@@ -1825,7 +1885,7 @@
     <value>Open Flag Explanations</value>
   </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>683, 17</value>
+    <value>812, 17</value>
   </metadata>
   <data name="statusStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 633</value>
@@ -1981,7 +2041,10 @@
     <value>1</value>
   </data>
   <metadata name="saveFileDialog2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>786, 19</value>
+    <value>927, 17</value>
+  </metadata>
+  <metadata name="FlagsToolTip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>21, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2127,6 +2190,24 @@
   <data name="&gt;&gt;showBonePartsToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;showFlagToolTipsToolStripMenuItem.Name" xml:space="preserve">
+    <value>showFlagToolTipsToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;showFlagToolTipsToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;renameMotionMarksToolStripMenuItem.Name" xml:space="preserve">
+    <value>renameMotionMarksToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;renameMotionMarksToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;helpToolStripMenuItem.Name" xml:space="preserve">
     <value>helpToolStripMenuItem</value>
   </data>
@@ -2174,6 +2255,18 @@
   </data>
   <data name="&gt;&gt;saveFileDialog2.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FlagsToolTip.Name" xml:space="preserve">
+    <value>FlagsToolTip</value>
+  </data>
+  <data name="&gt;&gt;FlagsToolTip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;deleteEmptyMotionMarksToolStripMenuItem.Name" xml:space="preserve">
+    <value>deleteEmptyMotionMarksToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;deleteEmptyMotionMarksToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>OMF_Editor</value>

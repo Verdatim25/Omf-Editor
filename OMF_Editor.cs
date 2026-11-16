@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Globalization;
 using System.IO;
@@ -12,6 +13,7 @@ using System.Runtime.InteropServices.ComTypes;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Microsoft.VisualBasic.Devices;
+using static System.Collections.Specialized.BitVector32;
 
 namespace OMF_Editor
 {
@@ -57,54 +59,54 @@ namespace OMF_Editor
             if (Environment.GetCommandLineArgs().Length > 1) OpenFile(Environment.GetCommandLineArgs()[1]);
 
             // drag drop capability
-			this.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
-			this.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
+            this.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
+            this.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
 
-			this.lbxMotions.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
-			this.lbxMotions.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
+            this.lbxMotions.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
+            this.lbxMotions.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
 
-		}
+        }
 
-		private void OMF_Editor_DragDrop(object sender, DragEventArgs e)
-		{
+        private void OMF_Editor_DragDrop(object sender, DragEventArgs e)
+        {
             // thanks windows
 
-			// Handle FileDrop data.
-			if (e.Data.GetDataPresent(DataFormats.FileDrop))
-			{
-				// Assign the file names to a string array, in 
-				// case the user has selected multiple files.
-				string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            // Handle FileDrop data.
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                // Assign the file names to a string array, in 
+                // case the user has selected multiple files.
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 
                 string main_file = files[0];
-                if (!(main_file.EndsWith(".omf"))){
+                if (!(main_file.EndsWith(".omf"))) {
                     string message = String.Format("File \n\"{0}\"\n is not an OMF file.", Path.GetFileName(main_file));
-					MessageBox.Show(message, "Error");
+                    MessageBox.Show(message, "Error");
                     return;
-				}
-				try
-				{
+                }
+                try
+                {
                     OpenFile(files[0]);
-				}
-				catch (Exception ex)
-				{
-					MessageBox.Show(ex.Message);
-					return;
-				}
-			}
-		}
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    return;
+                }
+            }
+        }
 
-		private void OMF_Editor_DragEnter(object sender, DragEventArgs e)
-		{
-			// thanks windows
+        private void OMF_Editor_DragEnter(object sender, DragEventArgs e)
+        {
+            // thanks windows
 
-			if (e.Data.GetDataPresent(DataFormats.FileDrop))
-				e.Effect = DragDropEffects.Copy;
-			else
-				e.Effect = DragDropEffects.None;
-		}
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+                e.Effect = DragDropEffects.Copy;
+            else
+                e.Effect = DragDropEffects.None;
+        }
 
-		[DllImport("converter.dll")]
+        [DllImport("converter.dll")]
         private static extern int CSharpStartAgent(string path, string out_path, int mode, int convert_to_mode, string motion_list);
 
         private int RunConverter(string path, string out_path, int mode, int convert_to_mode, string motion_list)
@@ -136,17 +138,17 @@ namespace OMF_Editor
             // from verdatim
             Boxes.Add(chbxESMFX);
 
-			Boxes.Add(chbxStopAtEnd);
+            Boxes.Add(chbxStopAtEnd);
             Boxes.Add(chbxNoMix);
             Boxes.Add(chbxSyncPart);
             Boxes.Add(chbxUseFootSteps);
             Boxes.Add(chbxMoveXForm);
             Boxes.Add(chbxIdle);
             Boxes.Add(chbxUseWeaponBone);
-			// from verdatim
-			Boxes.Add(chbxSkipFirstFrame);
+            // from verdatim
+            Boxes.Add(chbxSkipFirstFrame);
 
-			Boxes.Add(chbxHasMotionMarks);
+            Boxes.Add(chbxHasMotionMarks);
 
             textBoxes.Add(tbxMotName);
             textBoxes.Add(tbxMotSpeed);
@@ -414,7 +416,7 @@ namespace OMF_Editor
 
             for (int i = 1; i < 10; i++)
             {
-                Boxes[i - 1].Checked = (Flags & (1 << i-1)) == (1 << i-1);
+                Boxes[i - 1].Checked = (Flags & (1 << i - 1)) == (1 << i - 1);
             }
 
             chbxHasMotionMarks.Checked = (Main_OMF.GetMotionVersion() == 4 && GetCurrentMotion().m_marks != null);
@@ -426,7 +428,7 @@ namespace OMF_Editor
 
             for (int i = 1; i < 10; i++)
             {
-                GetCurrentMotion().Flags = BitSet(GetCurrentMotion().Flags, (1 << i-1), Boxes[i - 1].Checked);
+                GetCurrentMotion().Flags = BitSet(GetCurrentMotion().Flags, (1 << i - 1), Boxes[i - 1].Checked);
             }
         }
 
@@ -482,9 +484,9 @@ namespace OMF_Editor
 
             try
             {
-               Convert.ToSingle(current.Text);
+                Convert.ToSingle(current.Text);
             }
-            catch(Exception)
+            catch (Exception)
             {
                 switch (current.Tag.ToString())
                 {
@@ -936,7 +938,7 @@ namespace OMF_Editor
                 // change by verdatim, only show confirmation box if motion mark count is not 0
                 DialogResult result = DialogResult.Yes;
                 if (GetCurrentMotion().MarksCount != 0)
-				result = MessageBox.Show("This operation will delete all existing motion marks. Are you sure?", "Warning!", MessageBoxButtons.YesNo);
+                    result = MessageBox.Show("This operation will delete all existing motion marks. Are you sure?", "Warning!", MessageBoxButtons.YesNo);
 
                 if (result == DialogResult.Yes)
                 {
@@ -1062,30 +1064,30 @@ namespace OMF_Editor
             System.Diagnostics.Process.Start("https://github.com/VaIeroK/Omf-Editor");
         }
 
-		private void linkLabel2_LinkClicked(object sender, EventArgs e)
-		{
-			System.Diagnostics.Process.Start("https://github.com/Verdatim25/Omf-Editor");
-		}
+        private void linkLabel2_LinkClicked(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Verdatim25/Omf-Editor");
+        }
 
-		private void linkLabel3_LinkClicked(object sender, EventArgs e)
-		{
+        private void linkLabel3_LinkClicked(object sender, EventArgs e)
+        {
             MessageBox.Show("Original OMF editor by Mortany. \nModified version created by Valerok. \nFurther modified by Verdatim to add hidden flag \"esmFX\", and Anomaly Modded Exes [version_name_here] \"SkipFirstFrame\" flag for additive HUD animations.", "Acknowledgements");
-		}
+        }
 
-		private void linkLabel4_LinkClicked(object sender, EventArgs e)
-		{
-			MessageBox.Show("This explanation is in the perspective of Stalker Anomaly modding. Information may or may not be correct for other Stalker games/mods.\nESMFX:\n    ESMFX is a special flag used for " +
+        private void linkLabel4_LinkClicked(object sender, EventArgs e)
+        {
+            MessageBox.Show("This explanation is in the perspective of Stalker Anomaly modding. Information may or may not be correct for other Stalker games/mods.\nESMFX:\n    ESMFX is a special flag used for " +
             "very few animations in Anomaly. Notable mentions include mutant and stalker hit animations such as the ones in mutant_boar_animation.omf. They are extra animations that have " +
             "their own chain of functions. it is meant to be played on top of the current animation. Though due to the nature of their implementation, it does very little.\nSkip First Frame:\n    " +
             "Skip First Frame is an Anomaly modded exes exclusive flag added for " +
             "additive HUD animations (also created by me). This flag simply copies the second keyframes translations and rotations onto the first keyframe. Only works for additive animations.\nStop At End:\n    Stop At End describes whether the motion will stop playing once it reaches the last keyframe, without this flag, the animation will reset " +
-			"once it reaches the last keyframe and start playing from the first keyframe again.\nNo Mix:\n    No Mix has no current use in the stalker anomaly modded exes engine.\nSync Part:\n    " +
-			"Sync Part is used for stalker NPC animations. It syncs the NPC's torso and legs blends' (animations) \"time\" together, essentially keeping the two animations in sync.\nUse Foot Steps:\n" +
-			"    Use Foot Steps has no current use in the anomaly modded exes engine.\nMove XForm:\n    Move XForm is for stalker NPC animations. Upon the animation being called it: 1. Stops the " +
-			"NPC's movement entirely and 2. Plays the animation.\nIdle:\n    Idle has no current use in the anomaly modded exes engine.\nUse Weapon Bone:\n    Use Weapon Bone has no current use in the anomaly modded exes engine.", "Flag Explanations");
-		}
+            "once it reaches the last keyframe and start playing from the first keyframe again.\nNo Mix:\n    No Mix has no current use in the stalker anomaly modded exes engine.\nSync Part:\n    " +
+            "Sync Part is used for stalker NPC animations. It syncs the NPC's torso and legs blends' (animations) \"time\" together, essentially keeping the two animations in sync.\nUse Foot Steps:\n" +
+            "    Use Foot Steps has no current use in the anomaly modded exes engine.\nMove XForm:\n    Move XForm is for stalker NPC animations. Upon the animation being called it: 1. Stops the " +
+            "NPC's movement entirely and 2. Plays the animation.\nIdle:\n    Idle has no current use in the anomaly modded exes engine.\nUse Weapon Bone:\n    Use Weapon Bone has no current use in the anomaly modded exes engine.", "Flag Explanations");
+        }
 
-		private void swapAnimsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void swapAnimsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.FileName = "";
             DialogResult res = openFileDialog1.ShowDialog();
@@ -1130,93 +1132,320 @@ namespace OMF_Editor
             }
         }
 
-		private void ViewKeyFrames_Click(object sender, EventArgs e)
-		{
+        private void ViewKeyFrames_Click(object sender, EventArgs e)
+        {
             // code from verdatim 15/11/26 dd/mm/yy
-            AnimVector selected = GetCurrentAnimVector();
-            if (selected == null) return;
-            byte[] data = selected.data;
 
-            // the binary data going forward is presented as such: a u32 4 byte string for the number of keyframes, and then a u8 flag for the animation data,
-            // followed by the animation data for each bone (which consists of a rotation and translation key set)
-            // for every bone id, there are rotation and translation key sets for each frame
-            // the order is as such: bone_id -> frame -> rotation + translation
-            // each bone_id is not represented in the binary data, though it dictates how many sets of frames tied to rotation and translation keys there are
-            // the frame is similar
-            // the rotation set is 4 quarternions of s16 size, i.e. 2 bytes, total 8 bytes
-            // each translation set is 3 x,y,z coordinates of either s8, i.e. 1 byte, or s16, i.e. 2 bytes, size dicated from the flag above, total 3 or 6 bytes
-            // flag definitions are below (straight from the engine at SkeletonMotions.h at line 20)
+            // alright time for a different approach, this just doesnt seem to work
 
-            // get the bone count
-            short Bone_count = Main_OMF.bone_cont.Count;
+            // eventually check out https://osf.io/prcmq/files/sedhn for quarternion to euler conversion
 
-            int TotalKeyFrames = BitConverter.ToInt32(data, 0);
-            // fifth byte in the data, indices start at 0
-            int flags = data[4];
+            List<List<List<float>>> rotation_result = new List<List<List<float>>>();
+            List<List<List<float>>> translation_result = new List<List<List<float>>>();
 
-            int stream_index = 4;
+            if (lbxMotions.SelectedIndex == -1) return;
 
-            short[][][] rotation_result = null;
-			short[][][] translation_result = null;
+            using (BinaryReader reader = new BinaryReader(File.Open(Main_OMF.FileName, FileMode.Open)))
+            {
+                //AnimationsContainer omf_file = new AnimationsContainer(reader, this);
+                int SectionId = reader.ReadInt32();
+                uint SectionSize = reader.ReadUInt32();
 
-			// iterate across bones
-			for (int i = 0; i < Bone_count; i++) {
-                for (int k = 0; k < TotalKeyFrames; k++){
-                    // test for rotation key presence flag
-                    if ((flags & flRKeyAbsent) != 0) {
-                            // move stream index by 8
-                            stream_index += 8;
-                    }
+                int SectionId2 = reader.ReadInt32();
+                uint SectionSize2 = reader.ReadUInt32();
+
+                int AnimsCount = reader.ReadInt32();
+
+                int count = AnimsCount;
+
+                for (int i = 0; i <= lbxMotions.SelectedIndex; i++)
+                {
+                    AnimVector vector = new AnimVector
+                    {
+                        SectionId = reader.ReadInt32(),
+                        SectionSize = reader.ReadUInt32(),
+                        Name = editor.ReadSuperString(reader)
+                    };
+
+                    int size = (int)vector.SectionSize - (vector.Name.Length + 1);
+
+                    if ((i) != lbxMotions.SelectedIndex)
+                        vector.data = reader.ReadBytes(size);
                     else {
-                        // crc_q value
-                        stream_index += 4;
-                        // length of the rotation values is the total keyframes * 8
-                        int length = 8;
-                            short x = BitConverter.ToInt16(data, stream_index + (k * 8)); ;
-							short y = BitConverter.ToInt16(data, stream_index + 1 + (k * 8)); 
-						    short z = BitConverter.ToInt16(data, stream_index + 2 + (k * 8));
-						    short w = BitConverter.ToInt16(data, stream_index + 3 + (k * 8));
-						    rotation_result[i][k][0] = x;
-							rotation_result[i][k][1] = y;
-							rotation_result[i][k][2] = z;
-							rotation_result[i][k][3] = w;
-                        stream_index += length;
+                        uint TotalKeyFrames = reader.ReadUInt32();
+                        int Bone_count = 0;
+                        for (int _i = 0; _i < Main_OMF.bone_cont.parts.Count; _i++)
+                        {
+                            Bone_count += Main_OMF.bone_cont.parts[_i].bones.Count;
+                        }
+                        for (int _i = 0; _i < Bone_count; _i++) {
+                            List<List<float>> temp_bone_rot = new List<List<float>>();
+                            List<List<float>> temp_bone_trans = new List<List<float>>();
+                            ushort flags = reader.ReadByte();
+                            float[] trans_vector_size = new float[3];
+                            float[] trans_vector_init = new float[3];
+                            if ((flags & flRKeyAbsent) != 0)
+                            {
+                                byte[] temp = reader.ReadBytes(8);
+                                for (int k = 0; k < TotalKeyFrames; k++)
+                                {
+                                    temp_bone_rot.Add(new List<float> { 0, 0, 0, 0 });
+                                }
+                                rotation_result.Add(temp_bone_rot);
+                            }
+
+                            else
+                            {
+                                int crc_q = reader.ReadInt32();
+                                for (int k = 0; k < TotalKeyFrames; k++)
+                                {
+                                    float x = ((float)reader.ReadInt16()) / 32767F;
+                                    float y = ((float)reader.ReadInt16()) / 32767F;
+                                    float z = ((float)reader.ReadInt16()) / 32767F;
+                                    float w = ((float)reader.ReadInt16()) / 32767F;
+                                    temp_bone_rot.Add(new List<float> { x, y, z, w });
+                                }
+                                rotation_result.Add(temp_bone_rot);
+
+                            }
+                            if ((flags & flTKeyPresent) != 0) {
+                                int crc_t = reader.ReadInt32();
+                                if ((flags & flTKey16IsBit) != 0) {
+                                    for (int k = 0; k < TotalKeyFrames; k++) {
+                                        float x = (float)reader.ReadInt16();
+                                        float y = (float)reader.ReadInt16();
+                                        float z = (float)reader.ReadInt16();
+                                        temp_bone_trans.Add(new List<float> { x, y, z });
+                                    }
+                                }
+                                else {
+                                    for (int k = 0; k < TotalKeyFrames; k++)
+                                    {
+                                        float x = (float)reader.ReadByte();
+                                        float y = (float)reader.ReadByte();
+                                        float z = (float)reader.ReadByte();
+                                        temp_bone_trans.Add(new List<float> { x, y, z });
+                                    }
+                                }
+
+                                //byte[] vector_size = reader.ReadBytes(12);
+                                //byte[] vector_initial = reader.ReadBytes(12);
+                                float x_s = (float)reader.ReadSingle();
+                                float y_s = (float)reader.ReadSingle();
+                                float z_s = (float)reader.ReadSingle();
+
+                                float x_i = (float)reader.ReadSingle();
+                                float y_i = (float)reader.ReadSingle();
+                                float z_i = (float)reader.ReadSingle();
+
+                                temp_bone_trans.Add(new List<float> { x_i, y_i, z_i });
+								temp_bone_trans.Add(new List<float> { x_s, y_s, z_s });
+								translation_result.Add(temp_bone_trans);
+                            }
+                            else {
+                                for (int k = 0; k < TotalKeyFrames; k++)
+                                {
+                                    temp_bone_trans.Add(new List<float> { 0, 0, 0 });
+                                }
+                                float x_i = (float)reader.ReadSingle();
+                                float y_i = (float)reader.ReadSingle();
+                                float z_i = (float)reader.ReadSingle();
+                                temp_bone_trans.Add(new List<float> { x_i, y_i, z_i });
+                                translation_result.Add(temp_bone_trans);
+                                //byte[] vector_initial = reader.ReadBytes(12);
+                            }
+
+                        }
+                        // call the keyframe window
+                        KeyframeWindow window = new KeyframeWindow(Main_OMF.bone_cont.parts, rotation_result, translation_result, GetCurrentMotion(), TotalKeyFrames);
+                        window.ShowDialog();
                     }
-					if ((flags & flTKeyPresent) != 0)
-					{
-						// crc_t value
-						stream_index += 4;
-                        if ((flags & flTKey16IsBit) != 0){
-                            int length = 6;
-							short x = BitConverter.ToInt16(data, stream_index + (k * 6));
-							short y = BitConverter.ToInt16(data, stream_index + 1 + (k * 6));
-							short z = BitConverter.ToInt16(data, stream_index + 2 + (k * 6));
-							translation_result[i][k][0] = x;
-							translation_result[i][k][1] = y;
-							translation_result[i][k][2] = z;
-							stream_index += length;
-						}
-                        else{
-                            int length = 3;
-							short x = data[stream_index + (k * 3)];
-							short y = data[stream_index + 1 + (k * 3)];
-							short z = data[stream_index + 2 + (k * 3)];
-							translation_result[i][k][0] = x;
-							translation_result[i][k][1] = y;
-							translation_result[i][k][2] = z;
-							stream_index += length;
-						}
-
-					}
-				}
+                }
             }
-            // call the keyframe window
-			KeyframeWindow window = new KeyframeWindow(Main_OMF.bone_cont.parts, rotation_result, translation_result, GetCurrentMotion());
-			window.ShowDialog();
 
-		}
+
+
+
+
+            //         AnimVector selected = GetCurrentAnimVector();
+            //         if (selected == null) return;
+            //         byte[] data = selected.data;
+
+            //         // the binary data going forward is presented as such: a u32 4 byte string for the number of keyframes, and then a u8 flag for the animation data,
+            //         // followed by the animation data for each bone (which consists of a rotation and translation key set)
+            //         // for every bone id, there are rotation and translation key sets for each frame
+            //         // the order is as such: bone_id -> frame -> rotation + translation
+            //         // each bone_id is not represented in the binary data, though it dictates how many sets of frames tied to rotation and translation keys there are
+            //         // the frame is similar
+            //         // the rotation set is 4 quarternions of s16 size, i.e. 2 bytes, total 8 bytes
+            //         // each translation set is 3 x,y,z coordinates of either s8, i.e. 1 byte, or s16, i.e. 2 bytes, size dicated from the flag above, total 3 or 6 bytes
+            //         // flag definitions are below (straight from the engine at SkeletonMotions.h at line 20)
+
+            //         // rotation values are quantized, i.e. they are the values multiplied by 32767 (16bit signed int limit)
+            //         // to return to the old values, one must multiply by (1/32767) or just divide by 32767
+
+
+            //         // get the bone count
+            //         int Bone_count = 0;
+            //for (int i = 0; i < Main_OMF.bone_cont.parts.Count; i++)
+            //{
+            //             Bone_count += Main_OMF.bone_cont.parts[i].bones.Count;
+            //}
+
+
+            //uint TotalKeyFrames = BitConverter.ToUInt32(data, 0);
+            //         // fourth byte in the data, indices start at 0
+
+            //         int stream_index = 4;
+
+
+            //// iterate across bones
+            //for (int i = 0; i < Bone_count; i++) {
+            //	List<List<float>> temp_bone_rot = new List<List<float>>();
+            //	List<List<short>> temp_bone_trans = new List<List<short>>();
+            //             ushort flags = data[stream_index];
+            //             stream_index++;
+            //             bool rot_absent = false;
+            //             for (int k = 0; k < TotalKeyFrames; k++)
+            //             {
+            //                 // test for rotation key presence flag
+            //                 if ((flags & flRKeyAbsent) != 0)
+            //                 {
+            //                     // move stream index by 8
+            //                     float x = BitConverter.ToInt16(data, stream_index) / 32767;
+            //			float y = BitConverter.ToInt16(data, stream_index + 2) / 32767;
+            //			float z = BitConverter.ToInt16(data, stream_index + 4) / 32767;
+            //			float w = BitConverter.ToInt16(data, stream_index + 6) / 32767;
+            //                     temp_bone_rot.Add(new List<float> { x, y, z, w });
+            //                     if (!rot_absent)
+            //                     {
+            //                         stream_index += 8;
+            //                         rot_absent = true;
+            //                     }
+            //                 }
+            //                 else
+            //                 {
+            //                     // crc_q value
+            //                     stream_index += 4;
+            //                     // length of the rotation values is the total keyframes * 8
+            //                     int length = 8;
+            //			//rotation_result.Capacity += 4;
+            //			float x = BitConverter.ToInt16(data, stream_index) / 32767;
+            //			float y = BitConverter.ToInt16(data, stream_index + 2) / 32767;
+            //			float z = BitConverter.ToInt16(data, stream_index + 4) / 32767;
+            //			float w = BitConverter.ToInt16(data, stream_index + 6) / 32767;
+
+            //                     temp_bone_rot.Add(new List<float> { x, y, z, w });
+
+            //                     //rotation_result[i][k][0] = x;
+            //                     //rotation_result[i][k][1] = y;
+            //                     //rotation_result[i][k][2] = z;
+            //                     //rotation_result[i][k][3] = w;
+            //                     stream_index += length;
+            //                 }
+            //             }
+            //	bool translation_absent = false;
+            //	for (int k = 0; k < TotalKeyFrames; k++){
+            //		if ((flags & flTKeyPresent) != 0)
+            //                 {
+            //                     // crc_t value
+            //                     stream_index += 4;
+            //                     if ((flags & flTKey16IsBit) != 0)
+            //                     {
+            //                         int length = 6;
+            //                         short x = BitConverter.ToInt16(data, stream_index);
+            //                         short y = BitConverter.ToInt16(data, stream_index + 2);
+            //                         short z = BitConverter.ToInt16(data, stream_index + 4);
+
+            //                         temp_bone_trans.Add(new List<short> { x, y, z });
+
+            //                         //translation_result.Capacity += 3;
+            //                         //translation_result[i][k][0] = x;
+            //                         //translation_result[i][k][1] = y;
+            //                         //translation_result[i][k][2] = z;
+            //                         stream_index += length;
+            //                     }
+            //                     else
+            //                     {
+            //                         int length = 3;
+            //                         short x = data[stream_index];
+            //                         short y = data[stream_index + 1];
+            //                         short z = data[stream_index + 2];
+            //                         temp_bone_trans.Add(new List<short> { x, y, z });
+            //                         //translation_result[i][k][0] = x;
+            //                         //translation_result[i][k][1] = y;
+            //                         //translation_result[i][k][2] = z;
+            //                         stream_index += length;
+            //                     }
+            //			// reading the "_sizeT"
+            //			if ((k + 1) == TotalKeyFrames)
+            //			{
+            //                         stream_index += 12;
+            //		    }
+
+
+            //		}
+            //                 else
+            //                 {
+            //                     temp_bone_trans.Add(new List<short> { 0, 0, 0 });
+            //                 }
+            //		// reading "_initT"
+            //		if ((k+1) == TotalKeyFrames){
+            //                     stream_index += 12;
+            //		}
+
+            //	}
+            //             rotation_result.Add(temp_bone_rot);
+            //             translation_result.Add(temp_bone_trans);
+
+            //}
+            //         // call the keyframe window
+            //KeyframeWindow window = new KeyframeWindow(Main_OMF.bone_cont.parts, rotation_result, translation_result, GetCurrentMotion(), TotalKeyFrames);
+            //window.ShowDialog();
+
+        }
         int flTKeyPresent = (1 << 0);
         int flRKeyAbsent = (1 << 1);
         int flTKey16IsBit = (1 << 2);
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            return;
+		}
+
+		private void showFlagToolTipsToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            showFlagToolTipsToolStripMenuItem.Checked = !(showFlagToolTipsToolStripMenuItem.Checked);
+            // dirty hack to essentially "disable" the tool tips, youd have to hover for 16.6 min to get the tooltip
+            FlagsToolTip.InitialDelay = (showFlagToolTipsToolStripMenuItem.Checked) ? 1000 : 999999;
+		}
+
+		private void renameMotionMarksToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			RenameMotionMarks window = new RenameMotionMarks(Main_OMF);
+			window.ShowDialog();
+		}
+
+		private void deleteEmptyMotionMarksToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            DialogResult result = DialogResult.No;
+            result = MessageBox.Show("Delete Empty Motion Mark Groups?", "Warning!", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes){
+                foreach (AnimationParams Params in Main_OMF.AnimsParams) {
+                    if (Params.m_marks != null){
+                        List<MotionMark> Remove_list = new List<MotionMark>();
+						foreach (MotionMark Mark in Params.m_marks){
+                            if (Mark.Count == 0){
+                                Remove_list.Add(Mark);
+                                Params.MarksCount--;
+                            }
+                        }
+                        foreach (MotionMark Mark in Remove_list){
+                            Params.m_marks.Remove(Mark);
+                        }
+                    }
+                }
+            }
+		}
 	}
 }

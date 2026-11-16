@@ -187,6 +187,7 @@
 			this.rad2degreescheck.Size = new System.Drawing.Size(108, 17);
 			this.rad2degreescheck.TabIndex = 15;
 			this.rad2degreescheck.Text = "Show In Degrees";
+			this.rad2degreesToolTip.SetToolTip(this.rad2degreescheck, "Show Values in degrees as ZXY Euler instead of radians as quaternions.");
 			this.rad2degreescheck.UseVisualStyleBackColor = true;
 			this.rad2degreescheck.CheckedChanged += new System.EventHandler(this.rad2degreescheck_CheckedChanged);
 			// 
@@ -198,6 +199,8 @@
 			this.LeftHandedCoordcheck.Size = new System.Drawing.Size(176, 17);
 			this.LeftHandedCoordcheck.TabIndex = 16;
 			this.LeftHandedCoordcheck.Text = "Left Handed Coordinate System";
+			this.rad2degreesToolTip.SetToolTip(this.LeftHandedCoordcheck, "Show ZXY Euler rotation values as if they were in a Left Handed Coordinate System" +
+        ". Blender is right handed.");
 			this.LeftHandedCoordcheck.UseVisualStyleBackColor = true;
 			this.LeftHandedCoordcheck.CheckedChanged += new System.EventHandler(this.LeftHandedCoordcheck_CheckedChanged);
 			// 

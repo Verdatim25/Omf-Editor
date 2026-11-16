@@ -43,6 +43,13 @@ namespace OMF_Editor
 						foreach (MotionMark motion_mark in Params.m_marks)
 						{
 							string name = motion_mark.Name;
+							foreach (char v in name)
+							{
+								if ((int)v < (33))
+								{
+									name = name.Remove(name.Length - 1);
+								}
+							}
 							if ((name == start_name) || (name == ""))
 							{
 								motion_mark.Name = end_name;

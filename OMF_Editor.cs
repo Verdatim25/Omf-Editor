@@ -169,7 +169,13 @@ namespace OMF_Editor
                 bs.DataSource = Main_OMF.AnimsParams;
                 lbxMotions.DataSource = bs;
                 lbxMotions.DisplayMember = "Name";
-                Main_OMF.FileName = filename;
+
+                // init the visual list box
+                VisBox.DisplayMember = "Name";
+                VisBox_UpdateIndices();
+
+
+				Main_OMF.FileName = filename;
 
                 LabelStatusFile.Text = filename.Substring(filename.LastIndexOf('\\') + 1);
                 saveAsToolStripMenuItem.Enabled = true;
@@ -1446,6 +1452,42 @@ namespace OMF_Editor
                     }
                 }
             }
+		}
+
+        public class motion_binder {
+            public string Name { get; set; }
+            public int index { get; set; }
+        }
+
+		private void VisBox_UpdateIndices()
+		{
+            VisBox.Items.Clear();
+            int _i = 0;
+            foreach (AnimationParams Params in lbxMotions.Items){
+                motion_binder motion = new motion_binder();
+                if (Params.Name.Contains(SearchBox.Text))
+                {
+                    motion.Name = Params.Name;
+                    motion.index = _i;
+                    VisBox.Items.Add(motion);
+                }
+				_i++;
+			}
+		}
+		private void VisBox_SelectedIndexChanged_1(object sender, EventArgs e)
+		{
+			motion_binder temp = (motion_binder)VisBox.SelectedItem;
+            //lbxMotions.SelectedIndex = temp.index;
+            lbxMotions.ClearSelected();
+            foreach (motion_binder binder in VisBox.SelectedItems){
+				lbxMotions.SetSelected(binder.index, true);
+			}
+            listBox1_SelectedIndexChanged(sender, e);
+		}
+
+		private void SearchBox_TextChanged(object sender, EventArgs e)
+		{
+            VisBox_UpdateIndices();
 		}
 	}
 }

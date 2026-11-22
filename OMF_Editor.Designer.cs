@@ -95,6 +95,7 @@ namespace OMF_Editor
 			this.showBonePartsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.showFlagToolTipsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.renameMotionMarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.deleteEmptyMotionMarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openSourceCodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -109,7 +110,8 @@ namespace OMF_Editor
 			this.chbxRealTimeLength = new System.Windows.Forms.CheckBox();
 			this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
 			this.FlagsToolTip = new System.Windows.Forms.ToolTip(this.components);
-			this.deleteEmptyMotionMarksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.VisBox = new System.Windows.Forms.ListBox();
+			this.SearchBox = new System.Windows.Forms.TextBox();
 			this.groupMotionParams.SuspendLayout();
 			this.groupMotionTimeFormat.SuspendLayout();
 			this.contextMenuStrip1.SuspendLayout();
@@ -630,6 +632,12 @@ namespace OMF_Editor
 			resources.ApplyResources(this.renameMotionMarksToolStripMenuItem, "renameMotionMarksToolStripMenuItem");
 			this.renameMotionMarksToolStripMenuItem.Click += new System.EventHandler(this.renameMotionMarksToolStripMenuItem_Click);
 			// 
+			// deleteEmptyMotionMarksToolStripMenuItem
+			// 
+			this.deleteEmptyMotionMarksToolStripMenuItem.Name = "deleteEmptyMotionMarksToolStripMenuItem";
+			resources.ApplyResources(this.deleteEmptyMotionMarksToolStripMenuItem, "deleteEmptyMotionMarksToolStripMenuItem");
+			this.deleteEmptyMotionMarksToolStripMenuItem.Click += new System.EventHandler(this.deleteEmptyMotionMarksToolStripMenuItem_Click);
+			// 
 			// toolStripMenuItem1
 			// 
 			this.toolStripMenuItem1.Checked = true;
@@ -725,17 +733,28 @@ namespace OMF_Editor
 			this.FlagsToolTip.ReshowDelay = 100;
 			this.FlagsToolTip.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
 			// 
-			// deleteEmptyMotionMarksToolStripMenuItem
+			// VisBox
 			// 
-			this.deleteEmptyMotionMarksToolStripMenuItem.Name = "deleteEmptyMotionMarksToolStripMenuItem";
-			resources.ApplyResources(this.deleteEmptyMotionMarksToolStripMenuItem, "deleteEmptyMotionMarksToolStripMenuItem");
-			this.deleteEmptyMotionMarksToolStripMenuItem.Click += new System.EventHandler(this.deleteEmptyMotionMarksToolStripMenuItem_Click);
+			this.VisBox.AllowDrop = true;
+			resources.ApplyResources(this.VisBox, "VisBox");
+			this.VisBox.FormattingEnabled = true;
+			this.VisBox.Name = "VisBox";
+			this.VisBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+			this.VisBox.SelectedIndexChanged += new System.EventHandler(this.VisBox_SelectedIndexChanged_1);
+			// 
+			// SearchBox
+			// 
+			resources.ApplyResources(this.SearchBox, "SearchBox");
+			this.SearchBox.Name = "SearchBox";
+			this.SearchBox.TextChanged += new System.EventHandler(this.SearchBox_TextChanged);
 			// 
 			// OMF_Editor
 			// 
 			this.AllowDrop = true;
 			resources.ApplyResources(this, "$this");
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.Controls.Add(this.SearchBox);
+			this.Controls.Add(this.VisBox);
 			this.Controls.Add(this.groupProgramParams);
 			this.Controls.Add(this.statusStrip1);
 			this.Controls.Add(this.menuStrip1);
@@ -852,6 +871,8 @@ namespace OMF_Editor
 		private System.Windows.Forms.ToolStripMenuItem renameMotionMarksToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem deleteEmptyMotionMarksToolStripMenuItem;
+		private System.Windows.Forms.ListBox VisBox;
+		private System.Windows.Forms.TextBox SearchBox;
 	}
 }
 

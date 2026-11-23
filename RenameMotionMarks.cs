@@ -37,6 +37,7 @@ namespace OMF_Editor
 			result = MessageBox.Show(message, "Warning!", MessageBoxButtons.YesNo);
 			if (result == DialogResult.Yes)
 			{
+				bool renamed = false;
 				foreach (AnimationParams Params in Main_OMF.AnimsParams)
 				{
 					if (Params.m_marks != null){
@@ -58,11 +59,37 @@ namespace OMF_Editor
 							if ((name == start_name) || (name == ""))
 							{
 								motion_mark.Name = end_name;
+								renamed = true;
 							}
 						}
 					}
 				}
+				if (renamed)
+					Close();
 			}
+		}
+
+		private void RenameMotionMarks_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyData == Keys.Escape)
+			{
+				Close();
+			}
+		}
+
+		private void MotionMarkTextBoxFirst_KeyDown(object sender, KeyEventArgs e)
+		{
+			RenameMotionMarks_KeyDown(sender, e);
+		}
+
+		private void MotionMarkTextBoxSecond_KeyDown(object sender, KeyEventArgs e)
+		{
+			RenameMotionMarks_KeyDown(sender, e);
+		}
+
+		private void RenameMotionMarksButton_KeyDown(object sender, KeyEventArgs e)
+		{
+			RenameMotionMarks_KeyDown(sender, e);
 		}
 	}
 }

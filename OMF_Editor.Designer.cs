@@ -741,6 +741,7 @@ namespace OMF_Editor
 			this.VisBox.Name = "VisBox";
 			this.VisBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
 			this.VisBox.SelectedIndexChanged += new System.EventHandler(this.VisBox_SelectedIndexChanged_1);
+			this.VisBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.VisBox_KeyDown);
 			// 
 			// SearchBox
 			// 

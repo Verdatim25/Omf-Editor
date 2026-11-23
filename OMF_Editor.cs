@@ -44,6 +44,8 @@ namespace OMF_Editor
 
         ResourceManager rm = new ResourceManager(typeof(OMF_Editor));
 
+        public int Rename_marks_tab = 0;
+
         public OMF_Editor()
         {
             InitializeComponent();
@@ -62,10 +64,12 @@ namespace OMF_Editor
             this.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
             this.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
 
-            this.lbxMotions.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
-            this.lbxMotions.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
+			//this.lbxMotions.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
+			//this.lbxMotions.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
+			this.VisBox.DragDrop += new DragEventHandler(this.OMF_Editor_DragDrop);
+			this.VisBox.DragEnter += new DragEventHandler(this.OMF_Editor_DragEnter);
 
-        }
+		}
 
         private void OMF_Editor_DragDrop(object sender, DragEventArgs e)
         {
@@ -205,6 +209,7 @@ namespace OMF_Editor
             bs.ResetBindings(false);
             if (save_pos) lbxMotions.SelectedIndex = pos;
             MotionParamsUpdate();
+            VisBox_UpdateIndices();
         }
 
         private void AppendFile(string filename, List<string> list)
@@ -878,7 +883,7 @@ namespace OMF_Editor
             motionMark.Name = "NewGroup" + GetCurrentMotion().m_marks.Count;
             motionMark.m_params = new List<MotionMarkParams>();
 
-            MarkRename markRename = new MarkRename(motionMark.Name);
+            MarkRename markRename = new MarkRename(motionMark.Name, this);
             markRename.ShowDialog();
             if (markRename.res)
                 motionMark.Name = markRename.content;
@@ -1030,7 +1035,7 @@ namespace OMF_Editor
         {
             if (listMotionMarksGroup.SelectedItems.Count != 0)
             {
-                MarkRename markRename = new MarkRename(listMotionMarksGroup.SelectedItems[0].Text);
+                MarkRename markRename = new MarkRename(listMotionMarksGroup.SelectedItems[0].Text, this);
                 markRename.ShowDialog();
                 if (markRename.res == false) return;
 
@@ -1488,6 +1493,15 @@ namespace OMF_Editor
 		private void SearchBox_TextChanged(object sender, EventArgs e)
 		{
             VisBox_UpdateIndices();
+		}
+
+		private void VisBox_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyData == Keys.Delete)
+			{
+				if (Main_OMF.Anims.Count > 1)
+					deleteToolStripMenuItem_Click(sender, e);
+			}
 		}
 	}
 }

@@ -12,13 +12,18 @@ namespace OMF_Editor
 {
     public partial class MarkRename : Form
     {
-        public MarkRename(string name)
+        OMF_Editor editor_instance;
+        public MarkRename(string name, OMF_Editor instance)
         {
-            InitializeComponent();
+            editor_instance = instance;
+
+			InitializeComponent();
 
             textBox1.Text = name;
             this.ActiveControl=textBox1;
-        }
+            RenameMarksTabs.SelectedIndex = editor_instance.Rename_marks_tab;
+
+		}
         public bool res = false;
         public string content = "";
         private void button1_Click(object sender, EventArgs e)
@@ -49,5 +54,10 @@ namespace OMF_Editor
             res = true;
             Close();
         }
-    }
+
+		private void RenameMarksTabs_SelectedIndexChanged(object sender, EventArgs e)
+		{
+            editor_instance.Rename_marks_tab = RenameMarksTabs.SelectedIndex;
+		}
+	}
 }

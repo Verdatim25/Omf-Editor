@@ -40,6 +40,7 @@
 			this.MotionMarkTextBoxFirst.Name = "MotionMarkTextBoxFirst";
 			this.MotionMarkTextBoxFirst.Size = new System.Drawing.Size(140, 20);
 			this.MotionMarkTextBoxFirst.TabIndex = 0;
+			this.MotionMarkTextBoxFirst.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MotionMarkTextBoxFirst_KeyDown);
 			// 
 			// MotionMarkTextBoxSecond
 			// 
@@ -47,6 +48,7 @@
 			this.MotionMarkTextBoxSecond.Name = "MotionMarkTextBoxSecond";
 			this.MotionMarkTextBoxSecond.Size = new System.Drawing.Size(142, 20);
 			this.MotionMarkTextBoxSecond.TabIndex = 1;
+			this.MotionMarkTextBoxSecond.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MotionMarkTextBoxSecond_KeyDown);
 			// 
 			// RenameMotionMarksButton
 			// 
@@ -57,6 +59,7 @@
 			this.RenameMotionMarksButton.Text = "Rename Marks";
 			this.RenameMotionMarksButton.UseVisualStyleBackColor = true;
 			this.RenameMotionMarksButton.Click += new System.EventHandler(this.RenameMotionMarksButton_Click);
+			this.RenameMotionMarksButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RenameMotionMarksButton_KeyDown);
 			// 
 			// RenameMotionMarksLabel
 			// 
@@ -81,6 +84,7 @@
 			this.ShowIcon = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Rename Motion Marks";
+			this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.RenameMotionMarks_KeyDown);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
